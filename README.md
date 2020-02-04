@@ -167,7 +167,7 @@ Source\Ram2Axi4.v                     		DDR控制器Axi4控制接口代码
 
  ## DDR控制器测试平台使用说明		pdf
 
-  - [DDR控制器测试平台使用说明V1.3.pdf](.\DDR控制器测试平台使用说明V1.3.pdf)
+  - [DDR控制器测试平台使用说明V1.3.pdf](./DDR控制器测试平台使用说明V1.3.pdf)
 
  ## Update
 
