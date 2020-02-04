@@ -1,0 +1,715 @@
+
+Efinix Static Timing Analysis Report
+Version: 2019.3.272.1.6 
+Date: Tue Feb  4 11:37:07 2020
+
+Copyright (C) 2013 - 2019 Efinix Inc. All rights reserved.
+ 
+Top-level Entity Name: DdrControllerDebug
+
+SDC Filename: /home/wisdom/2019.3/project/DDR3Test/Efinity/DdrControllerDebug.sdc
+
+Timing Model: C4
+	temperature : 0C to 85C
+	voltage : 1.2V +/-50mV
+	speedgrade : 4
+	technology : s40ll
+	status : preliminary
+
+	NOTE: The timing data is not final.
+
+---------- Table of Contents (begin) ----------
+   1. Clock Frequency Summary 
+   2. Clock Relationship Summary 
+   3. Path Details for Max Critical Paths 
+   4. Path Details for Min Critical Paths 
+---------- Table of Contents (end) ------------
+
+---------- 1. Clock Frequency Summary (begin) ----------
+
+User target constrained clocks
+Clock Name      Period (ns)   Frequency (MHz)   Waveform   Source Clock Name
+Axi0Clk             4.000         250.000         {0.000 2.000}        Axi0Clk
+Axi1Clk             4.000         250.000         {0.000 2.000}        Axi1Clk
+SysClk              4.000         250.000         {0.000 2.000}        SysClk
+
+Maximum possible analyzed clocks frequency
+Clock Name      Period (ns)   Frequency (MHz)   Edge
+Axi0Clk             8.008         124.880     (R-R)
+SysClk              4.633         215.851     (R-R)
+
+Geomean max period: 6.091
+
+---------- Clock Frequency Summary (end) ---------------
+
+---------- 2. Clock Relationship Summary (begin) ----------
+
+Launch Clock    Capture Clock    Constraint (ns)   Slack (ns)    Edge
+Axi0Clk          Axi0Clk               4.000        -4.008     (R-R)
+Axi0Clk          SysClk                4.000        -3.346     (R-R)
+SysClk           Axi0Clk               4.000        -4.095     (R-R)
+SysClk           SysClk                4.000        -0.633     (R-R)
+
+NOTE: Values are in nanoseconds.
+
+---------- Clock Relationship Summary (end) ---------------
+
+---------- 3. Path Details for Max Critical Paths (begin) ----------
+
+
+######################################################################
+Path Detail Report (SysClk vs Axi0Clk)
+######################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : DdrCtrl_WREADY_0
+Path End      : U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[100]~FF|CE
+Launch Clock  : SysClk (RISE)
+Capture Clock : Axi0Clk (RISE)
+Slack         : -4.095  (required time - arrival time)
+Delay         : 4.8
+
+Logic Level : 2
+Non-global nets on path : 3
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 0
++ Data Path Delay              : 4.975
++ Input Delay                  : 8.31
+--------------------------------------------
+End-of-path arrival time       : 13.285
+
+Constraint                     : 4
++ Capture Clock Path Delay     : 5.31
+- Clock Uncertainty            : 0.12
+--------------------------------------------
+End-of-path required time      : 9.19
+
+
+Data Path
+pin name                                                                 model name    delay (ns)   cumulative delay (ns)    pins on net   location
+====================================================================================================================================================
+ DdrCtrl_WREADY_0                                                         inpad              0.2                    0.2           4          (338,174)
+ DdrCtrl_WREADY_0                                                         io               1.794                  1.994           4          (338,174)
+   Routing elements:  
+     Manhattan distance of X:2, Y:100
+ U1_DdrTest/AxiWrEn~FF|I[2]                                               eft              0.161                  2.155           4          (336,74)
+ LUT__39628|in[2]                                                         lut                  0                  2.155           4          (336,74)
+ LUT__39628|out                                                           lut                  0                  2.155         240          (336,74)
+ U1_DdrTest/AxiWrEn~FF|O                                                  eft              1.057                  3.212         239          (336,74)
+ LUT__39841|I[3]                                                          eft              0.116                  3.328         240          (326,51)
+ LUT__39841|in[3]                                                         lut                  0                  3.328         240          (326,51)
+ LUT__39841|out                                                           lut                  0                  3.328         117          (326,51)
+ LUT__39841|O                                                             eft              1.472                    4.8         117          (326,51)
+ U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[100]~FF|CE    ff               0.175                  4.975         117          (324,14)
+
+Capture Clock Path
+pin name                                                                  model name    delay (ns)   cumulative delay (ns)    pins on net   location
+=====================================================================================================================================================
+ Axi0Clk                                                                   inpad               0                      0           2          (338,320)
+ Axi0Clk                                                                   inpad             0.2                    0.2           2          (338,320)
+ Axi0Clk                                                                   io                  0                    0.2           2          (338,320)
+   Routing elements:  
+     Manhattan distance of X:1, Y:0
+ CLKBUF__1|IO_in                                                           gbuf_block       0.32                   0.52           2          (337,320)
+ CLKBUF__1|I                                                               gbuf             4.79                   5.31           2          (337,320)
+ CLKBUF__1|O                                                               gbuf                0                   5.31        6672          (337,320)
+ CLKBUF__1|clkout                                                          gbuf_block          0                   5.31        6672          (337,320)
+ U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[100]~FF|CLK    ff                  0                   5.31        6672          (324,14)
+
+######################################################################
+Path Detail Report (Axi0Clk vs Axi0Clk)
+######################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : U1_DdrTest/U1_DdrWrCtrl/U1_DdrTest/RamWrAddr[1]~FF|CLK
+Path End      : U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[111]~FF|D
+Launch Clock  : Axi0Clk (RISE)
+Capture Clock : Axi0Clk (RISE)
+Slack         : -4.008  (required time - arrival time)
+Delay         : 7.488
+
+Logic Level : 19
+Non-global nets on path : 19
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 5.31
++ Clock To Q + Data Path Delay : 7.888
+--------------------------------------------
+End-of-path arrival time       : 13.198
+
+Constraint                     : 4
++ Capture Clock Path Delay     : 5.31
+- Clock Uncertainty            : 0.12
+--------------------------------------------
+End-of-path required time      : 9.19
+
+
+Launch Clock Path
+pin name                                                  model name    delay (ns)   cumulative delay (ns)    pins on net   location
+=====================================================================================================================================
+ Axi0Clk                                                   inpad               0                      0           2          (338,320)
+ Axi0Clk                                                   inpad             0.2                    0.2           2          (338,320)
+ Axi0Clk                                                   io                  0                    0.2           2          (338,320)
+   Routing elements:  
+     Manhattan distance of X:1, Y:0
+ CLKBUF__1|IO_in                                           gbuf_block       0.32                   0.52           2          (337,320)
+ CLKBUF__1|I                                               gbuf             4.79                   5.31           2          (337,320)
+ CLKBUF__1|O                                               gbuf                0                   5.31        6672          (337,320)
+ CLKBUF__1|clkout                                          gbuf_block          0                   5.31        6672          (337,320)
+ U1_DdrTest/U1_DdrWrCtrl/U1_DdrTest/RamWrAddr[1]~FF|CLK    ff                  0                   5.31        6672          (324,70)
+
+Data Path
+pin name                                                                    model name    delay (ns)   cumulative delay (ns)    pins on net   location
+=======================================================================================================================================================
+ U1_DdrTest/U1_DdrWrCtrl/U1_DdrTest/RamWrAddr[1]~FF|Q                        ff               0.282                  0.282           4          (324,70)
+ U1_DdrTest/U1_DdrWrCtrl/U1_DdrTest/RamWrAddr[1]~FF|O_seq                    eft              1.334                  1.616           4          (324,70)
+   Routing elements:  
+     Manhattan distance of X:6, Y:19
+ U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[129]~FF|I[2]     eft              0.044                   1.66           4          (330,51)
+ U1_DdrTest/U1_DdrWrDataGen/add_3/i2|I0                                      adder            0.223                  1.883           4          (330,51)
+ U1_DdrTest/U1_DdrWrDataGen/add_3/i2|CO                                      adder                0                  1.883           2          (330,51)
+ U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[129]~FF|cout     eft                  0                  1.883           2          (330,51)
+   Routing elements:  
+     Manhattan distance of X:0, Y:1
+ U1_DdrTest/U1_DdrWrDataGen/add_3/i3|CI                                      adder             0.19                  2.072           2          (330,52)
+ U1_DdrTest/U1_DdrWrDataGen/add_3/i3|O                                       adder                0                  2.072           5          (330,52)
+ U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[194]~FF|O        eft              1.045                  3.117           4          (330,52)
+   Routing elements:  
+     Manhattan distance of X:4, Y:13
+ U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[241]~FF|I[0]     eft              0.044                  3.161           5          (326,39)
+ U1_DdrTest/U1_DdrWrDataGen/add_711/i3|I0                                    adder            0.223                  3.384           5          (326,39)
+ U1_DdrTest/U1_DdrWrDataGen/add_711/i3|CO                                    adder                0                  3.384           2          (326,39)
+ U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[241]~FF|cout     eft                  0                  3.384           2          (326,39)
+   Routing elements:  
+     Manhattan distance of X:0, Y:1
+ U1_DdrTest/U1_DdrWrDataGen/add_711/i4|CI                                    adder             0.05                  3.434           2          (326,40)
+ U1_DdrTest/U1_DdrWrDataGen/add_711/i4|CO                                    adder                0                  3.434           2          (326,40)
+ U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[227]~FF|cout     eft                  0                  3.434           2          (326,40)
+   Routing elements:  
+     Manhattan distance of X:0, Y:1
+ AUX_ADD_CO_M__U1_DdrTest/U1_DdrWrDataGen/add_711/i4|CI                      adder             0.19                  3.624           2          (326,41)
+ AUX_ADD_CO_M__U1_DdrTest/U1_DdrWrDataGen/add_711/i4|O                       adder                0                  3.624           3          (326,41)
+ AUX_ADD_CO_M__U1_DdrTest/U1_DdrWrDataGen/add_711/i4|O                       eft              1.024                  4.648           3          (326,41)
+   Routing elements:  
+     Manhattan distance of X:2, Y:28
+ AUX_ADD_CO_MU__U1_DdrTest/U1_DdrWrDataGen/add_307/i5|I[2]                   eft              0.044                  4.692           3          (324,13)
+ AUX_ADD_CO_MU__U1_DdrTest/U1_DdrWrDataGen/add_307/i5|I0                     adder            0.223                  4.915           3          (324,13)
+ AUX_ADD_CO_MU__U1_DdrTest/U1_DdrWrDataGen/add_307/i5|CO                     adder                0                  4.915           2          (324,13)
+ AUX_ADD_CO_MU__U1_DdrTest/U1_DdrWrDataGen/add_307/i5|cout                   eft                  0                  4.915           2          (324,13)
+   Routing elements:  
+     Manhattan distance of X:0, Y:1
+ U1_DdrTest/U1_DdrWrDataGen/add_307/i5|CI                                    adder             0.05                  4.965           2          (324,14)
+ U1_DdrTest/U1_DdrWrDataGen/add_307/i5|CO                                    adder                0                  4.965           2          (324,14)
+ U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[100]~FF|cout     eft                  0                  4.965           2          (324,14)
+   Routing elements:  
+     Manhattan distance of X:0, Y:1
+ U1_DdrTest/U1_DdrWrDataGen/add_307/i6|CI                                    adder             0.19                  5.154           2          (324,15)
+ U1_DdrTest/U1_DdrWrDataGen/add_307/i6|O                                     adder                0                  5.154           3          (324,15)
+ U1_DdrTest/U1_DdrWrDataGen/add_307/i6|O                                     eft              0.769                  5.924           3          (324,15)
+   Routing elements:  
+     Manhattan distance of X:1, Y:1
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i2|I1                                    adder             0.22                  6.144           3          (325,16)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i2|CO                                    adder                0                  6.144           2          (325,16)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i2|cout                                  efl                  0                  6.144           2          (325,16)
+   Routing elements:  
+     Manhattan distance of X:0, Y:1
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i3|CI                                    adder            0.048                  6.192           2          (325,17)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i3|CO                                    adder                0                  6.192           2          (325,17)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i3|cout                                  efl                  0                  6.192           2          (325,17)
+   Routing elements:  
+     Manhattan distance of X:0, Y:1
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i4|CI                                    adder            0.048                   6.24           2          (325,18)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i4|CO                                    adder                0                   6.24           2          (325,18)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i4|cout                                  efl                  0                   6.24           2          (325,18)
+   Routing elements:  
+     Manhattan distance of X:0, Y:1
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i5|CI                                    adder            0.048                  6.287           2          (325,19)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i5|CO                                    adder                0                  6.287           2          (325,19)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i5|cout                                  efl                  0                  6.287           2          (325,19)
+   Routing elements:  
+     Manhattan distance of X:0, Y:1
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i6|CI                                    adder            0.048                  6.335           2          (325,20)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i6|CO                                    adder                0                  6.335           2          (325,20)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i6|cout                                  efl                  0                  6.335           2          (325,20)
+   Routing elements:  
+     Manhattan distance of X:0, Y:1
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i7|CI                                    adder            0.048                  6.383           2          (325,21)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i7|CO                                    adder                0                  6.383           2          (325,21)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i7|cout                                  efl                  0                  6.383           2          (325,21)
+   Routing elements:  
+     Manhattan distance of X:0, Y:1
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i8|CI                                    adder            0.048                  6.431           2          (325,22)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i8|CO                                    adder                0                  6.431           2          (325,22)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i8|cout                                  efl                  0                  6.431           2          (325,22)
+   Routing elements:  
+     Manhattan distance of X:0, Y:1
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i9|CI                                    adder            0.048                  6.478           2          (325,23)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i9|CO                                    adder                0                  6.478           2          (325,23)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i9|cout                                  efl                  0                  6.478           2          (325,23)
+   Routing elements:  
+     Manhattan distance of X:0, Y:1
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i10|CI                                   adder            0.048                  6.526           2          (325,24)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i10|CO                                   adder                0                  6.526           2          (325,24)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i10|cout                                 efl                  0                  6.526           2          (325,24)
+   Routing elements:  
+     Manhattan distance of X:0, Y:1
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i11|CI                                   adder            0.189                  6.715           2          (325,25)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i11|O                                    adder                0                  6.715           2          (325,25)
+ U1_DdrTest/U1_DdrWrDataGen/add_308/i11|O                                    efl              0.788                  7.503           2          (325,25)
+   Routing elements:  
+     Manhattan distance of X:1, Y:3
+ U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[111]~FF|I[0]     eft              0.267                   7.77           2          (326,22)
+ LUT__39938|in[0]                                                            lut                  0                   7.77           2          (326,22)
+ LUT__39938|out                                                              lut                  0                   7.77           2          (326,22)
+ U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[111]~FF|D        ff               0.118                  7.888           2          (326,22)
+
+Capture Clock Path
+pin name                                                                  model name    delay (ns)   cumulative delay (ns)    pins on net   location
+=====================================================================================================================================================
+ Axi0Clk                                                                   inpad               0                      0           2          (338,320)
+ Axi0Clk                                                                   inpad             0.2                    0.2           2          (338,320)
+ Axi0Clk                                                                   io                  0                    0.2           2          (338,320)
+   Routing elements:  
+     Manhattan distance of X:1, Y:0
+ CLKBUF__1|IO_in                                                           gbuf_block       0.32                   0.52           2          (337,320)
+ CLKBUF__1|I                                                               gbuf             4.79                   5.31           2          (337,320)
+ CLKBUF__1|O                                                               gbuf                0                   5.31        6672          (337,320)
+ CLKBUF__1|clkout                                                          gbuf_block          0                   5.31        6672          (337,320)
+ U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[111]~FF|CLK    ff                  0                   5.31        6672          (326,22)
+
+######################################################################
+Path Detail Report (Axi0Clk vs SysClk)
+######################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[228]~FF|CLK
+Path End      : DdrCtrl_WDATA_0[228]
+Launch Clock  : Axi0Clk (RISE)
+Capture Clock : SysClk (RISE)
+Slack         : -3.346  (required time - arrival time)
+Delay         : 4.444
+
+Logic Level : 1
+Non-global nets on path : 2
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 5.31
++ Clock To Q + Data Path Delay : 4.726
+--------------------------------------------
+End-of-path arrival time       : 10.036
+
+Constraint                     : 4
++ Capture Clock Path Delay     : 0
+- Clock Uncertainty            : 0.12
+- Output Delay                 : -2.81
+--------------------------------------------
+End-of-path required time      : 6.69
+
+
+Launch Clock Path
+pin name                                                                  model name    delay (ns)   cumulative delay (ns)    pins on net   location
+=====================================================================================================================================================
+ Axi0Clk                                                                   inpad               0                      0           2          (338,320)
+ Axi0Clk                                                                   inpad             0.2                    0.2           2          (338,320)
+ Axi0Clk                                                                   io                  0                    0.2           2          (338,320)
+   Routing elements:  
+     Manhattan distance of X:1, Y:0
+ CLKBUF__1|IO_in                                                           gbuf_block       0.32                   0.52           2          (337,320)
+ CLKBUF__1|I                                                               gbuf             4.79                   5.31           2          (337,320)
+ CLKBUF__1|O                                                               gbuf                0                   5.31        6672          (337,320)
+ CLKBUF__1|clkout                                                          gbuf_block          0                   5.31        6672          (337,320)
+ U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[228]~FF|CLK    ff                  0                   5.31        6672          (324,42)
+
+Data Path
+pin name                                                                    model name    delay (ns)   cumulative delay (ns)    pins on net   location
+=======================================================================================================================================================
+ U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[228]~FF|Q        ff               0.282                  0.282           2          (324,42)
+ U1_DdrTest/U1_DdrWrDataGen/dffrs_1069/U1_DdrTest/RamWrDOut[228]~FF|O_seq    eft              1.495                  1.777           2          (324,42)
+   Routing elements:  
+     Manhattan distance of X:4, Y:8
+ U1_DdrTest/AxiWrData[228]~FF|I[0]                                           eft              0.267                  2.044           2          (320,50)
+ LUT__39399|in[0]                                                            lut                  0                  2.044           2          (320,50)
+ LUT__39399|out                                                              lut                  0                  2.044           3          (320,50)
+ U1_DdrTest/AxiWrData[228]~FF|O                                              eft              2.482                  4.526           2          (320,50)
+   Routing elements:  
+     Manhattan distance of X:18, Y:141
+ DdrCtrl_WDATA_0[228]                                                        io                 0.2                  4.726           3          (338,191)
+
+######################################################################
+Path Detail Report (SysClk vs SysClk)
+######################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : U0_DDR_Reset/cnt[7]~FF|CLK
+Path End      : U0_DDR_Reset/cnt[12]~FF|CE
+Launch Clock  : SysClk (RISE)
+Capture Clock : SysClk (RISE)
+Slack         : -0.633  (required time - arrival time)
+Delay         : 4.056
+
+Logic Level : 4
+Non-global nets on path : 5
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 5.31
++ Clock To Q + Data Path Delay : 4.513
+--------------------------------------------
+End-of-path arrival time       : 9.823
+
+Constraint                     : 4
++ Capture Clock Path Delay     : 5.31
+- Clock Uncertainty            : 0.12
+--------------------------------------------
+End-of-path required time      : 9.19
+
+
+Launch Clock Path
+pin name                      model name    delay (ns)   cumulative delay (ns)    pins on net   location
+=========================================================================================================
+ SysClk                        inpad               0                      0           2          (338,322)
+ SysClk                        inpad             0.2                    0.2           2          (338,322)
+ SysClk                        io                  0                    0.2           2          (338,322)
+   Routing elements:  
+     Manhattan distance of X:1, Y:0
+ CLKBUF__0|IO_in               gbuf_block       0.32                   0.52           2          (337,322)
+ CLKBUF__0|I                   gbuf             4.79                   5.31           2          (337,322)
+ CLKBUF__0|O                   gbuf                0                   5.31          64          (337,322)
+ CLKBUF__0|clkout              gbuf_block          0                   5.31          64          (337,322)
+ U0_DDR_Reset/cnt[7]~FF|CLK    ff                  0                   5.31          64          (334,395)
+
+Data Path
+pin name                        model name    delay (ns)   cumulative delay (ns)    pins on net   location
+===========================================================================================================
+ U0_DDR_Reset/cnt[7]~FF|Q        ff               0.282                  0.282           3          (334,395)
+ U0_DDR_Reset/cnt[7]~FF|O_seq    eft              0.774                  1.056           3          (334,395)
+   Routing elements:  
+     Manhattan distance of X:1, Y:2
+ LUT__39528|I[1]                 efl              0.222                  1.278           3          (333,393)
+ LUT__39528|in[1]                lut                  0                  1.278           3          (333,393)
+ LUT__39528|out                  lut                  0                  1.278           2          (333,393)
+ LUT__39528|O                    efl              0.337                  1.615           2          (333,393)
+   Routing elements:  
+     Manhattan distance of X:0, Y:3
+ LUT__39529|I[0]                 efl              0.251                  1.866           2          (333,390)
+ LUT__39529|in[0]                lut                  0                  1.866           2          (333,390)
+ LUT__39529|out                  lut                  0                  1.866           2          (333,390)
+ LUT__39529|O                    efl              0.373                  2.239           2          (333,390)
+   Routing elements:  
+     Manhattan distance of X:0, Y:14
+ LUT__39531|I[1]                 efl              0.222                  2.461           2          (333,404)
+ LUT__39531|in[1]                lut                  0                  2.462           2          (333,404)
+ LUT__39531|out                  lut                  0                  2.462           2          (333,404)
+ LUT__39531|O                    efl               0.37                  2.832           2          (333,404)
+   Routing elements:  
+     Manhattan distance of X:0, Y:5
+ LUT__39534|I[1]                 efl              0.222                  3.054           2          (333,399)
+ LUT__39534|in[1]                lut                  0                  3.054           2          (333,399)
+ LUT__39534|out                  lut                  0                  3.054          22          (333,399)
+ LUT__39534|O                    efl              1.284                  4.338          22          (333,399)
+   Routing elements:  
+     Manhattan distance of X:1, Y:1
+ U0_DDR_Reset/cnt[12]~FF|CE      ff               0.175                  4.513          22          (334,400)
+
+Capture Clock Path
+pin name                       model name    delay (ns)   cumulative delay (ns)    pins on net   location
+==========================================================================================================
+ SysClk                         inpad               0                      0           2          (338,322)
+ SysClk                         inpad             0.2                    0.2           2          (338,322)
+ SysClk                         io                  0                    0.2           2          (338,322)
+   Routing elements:  
+     Manhattan distance of X:1, Y:0
+ CLKBUF__0|IO_in                gbuf_block       0.32                   0.52           2          (337,322)
+ CLKBUF__0|I                    gbuf             4.79                   5.31           2          (337,322)
+ CLKBUF__0|O                    gbuf                0                   5.31          64          (337,322)
+ CLKBUF__0|clkout               gbuf_block          0                   5.31          64          (337,322)
+ U0_DDR_Reset/cnt[12]~FF|CLK    ff                  0                   5.31          64          (334,400)
+
+---------- Path Details for Max Critical Paths (end) ---------------
+
+---------- 4. Path Details for Min Critical Paths (begin) ----------
+
+
+######################################################################
+Path Detail Report (Axi0Clk vs Axi0Clk)
+######################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : edb_top_inst/Axi/la_biu_inst/fifo_with_read_inst/din_p2[383]~FF|CLK
+Path End      : edb_top_inst/Axi/la_biu_inst/fifo_with_read_inst/simple_dual_port_ram_inst/ram__10_693(01)__10_688(01)__10_683(01)__10_678(01)__10_673(01)__10_668(01)__10_663(01)__10_658(01)__10_653(01)__10_648(01)__10_643(01)__10_638(01)__10_633(01)__10_628(01)__10_623(01)__10_618(01)__10_613(01)__10_608(01)__10_603(01)__10_598(01)__10_593(01)__10_588(01)__10_583(01)__10_578(01)__10_573(01)__10_568(01)__10_563(01)__10_558(01)__10_553(01)__10_548(01)__10_543(01)__10_538(01)__10_533(01)__10_528(01)__10_523(01)__10_518(01)__10_513(01)__10_508(01)__10_503(01)__10_498(01)__10_493(01)__10_488(01)__10_483(01)__10_478(01)__10_473(01)__10_468(01)__10_463(01)__10_458(01)__10_453(01)__10_448(01)__10_443(01)__10_438(01)__10_433(01)__10_428(01)__10_423(01)__10_418(01)__10_413(01)__10_408(01)__10_403(01)__10_398(01)__10_393(01)__10_388(01)__10_383(01)__10_378(01)__10_373(01)__10_368(01)__10_363(01)__10_358(01)__10_353(01)__10_348(01)__10_343(01)__10_338(01)__10_333(01)__10_328(01)__10_323(01)__10_318(01)__10_5(10)|WDATA[3]
+Launch Clock  : Axi0Clk (RISE)
+Capture Clock : Axi0Clk (RISE)
+Slack         : 0.119  (arrival time - required time)
+Delay         : 0.17
+
+Logic Level : 0
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 2.655
++ Clock To Q + Data Path Delay : 0.179
+--------------------------------------------
+End-of-path arrival time       : 2.834
+
+Constraint                     : 0
++ Capture Clock Path Delay     : 2.655
++ Clock Uncertainty            : 0.06
+--------------------------------------------
+End-of-path required time      : 2.715
+
+
+Launch Clock Path
+pin name                                                               model name    delay (ns)   cumulative delay (ns)    pins on net   location
+==================================================================================================================================================
+ Axi0Clk                                                                inpad               0                      0           2          (338,320)
+ Axi0Clk                                                                inpad             0.1                    0.1           2          (338,320)
+ Axi0Clk                                                                io                  0                    0.1           2          (338,320)
+   Routing elements:  
+     Manhattan distance of X:1, Y:0
+ CLKBUF__1|IO_in                                                        gbuf_block       0.16                   0.26           2          (337,320)
+ CLKBUF__1|I                                                            gbuf            2.395                  2.655           2          (337,320)
+ CLKBUF__1|O                                                            gbuf                0                  2.655        6672          (337,320)
+ CLKBUF__1|clkout                                                       gbuf_block          0                  2.655        6672          (337,320)
+ edb_top_inst/Axi/la_biu_inst/fifo_with_read_inst/din_p2[383]~FF|CLK    ff                  0                  2.655        6672          (292,5)
+
+Data Path
+pin name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             model name     delay (ns)   cumulative delay (ns)    pins on net   location
+=================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+ edb_top_inst/Axi/la_biu_inst/fifo_with_read_inst/din_p2[383]~FF|Q                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ff                0.141                  0.141           2          (292,5)
+ edb_top_inst/Axi/la_biu_inst/fifo_with_read_inst/din_p2[383]~FF|O_seq                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                eft                0.17                  0.311           2          (292,5)
+   Routing elements:  
+     Manhattan distance of X:3, Y:3
+ edb_top_inst/Axi/la_biu_inst/fifo_with_read_inst/simple_dual_port_ram_inst/ram__10_693(01)__10_688(01)__10_683(01)__10_678(01)__10_673(01)__10_668(01)__10_663(01)__10_658(01)__10_653(01)__10_648(01)__10_643(01)__10_638(01)__10_633(01)__10_628(01)__10_623(01)__10_618(01)__10_613(01)__10_608(01)__10_603(01)__10_598(01)__10_593(01)__10_588(01)__10_583(01)__10_578(01)__10_573(01)__10_568(01)__10_563(01)__10_558(01)__10_553(01)__10_548(01)__10_543(01)__10_538(01)__10_533(01)__10_528(01)__10_523(01)__10_518(01)__10_513(01)__10_508(01)__10_503(01)__10_498(01)__10_493(01)__10_488(01)__10_483(01)__10_478(01)__10_473(01)__10_468(01)__10_463(01)__10_458(01)__10_453(01)__10_448(01)__10_443(01)__10_438(01)__10_433(01)__10_428(01)__10_423(01)__10_418(01)__10_413(01)__10_408(01)__10_403(01)__10_398(01)__10_393(01)__10_388(01)__10_383(01)__10_378(01)__10_373(01)__10_368(01)__10_363(01)__10_358(01)__10_353(01)__10_348(01)__10_343(01)__10_338(01)__10_333(01)__10_328(01)__10_323(01)__10_318(01)__10_5(10)|WDATA[3]    ram_4096x20      -0.132                  0.179           2          (289,2)
+
+Capture Clock Path
+pin name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         model name     delay (ns)   cumulative delay (ns)    pins on net   location
+=============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+ Axi0Clk                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          inpad                0                      0           2          (338,320)
+ Axi0Clk                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          inpad              0.1                    0.1           2          (338,320)
+ Axi0Clk                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          io                   0                    0.1           2          (338,320)
+   Routing elements:  
+     Manhattan distance of X:1, Y:0
+ CLKBUF__1|IO_in                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  gbuf_block        0.16                   0.26           2          (337,320)
+ CLKBUF__1|I                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      gbuf             2.395                  2.655           2          (337,320)
+ CLKBUF__1|O                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      gbuf                 0                  2.655        6672          (337,320)
+ CLKBUF__1|clkout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 gbuf_block           0                  2.655        6672          (337,320)
+ edb_top_inst/Axi/la_biu_inst/fifo_with_read_inst/simple_dual_port_ram_inst/ram__10_693(01)__10_688(01)__10_683(01)__10_678(01)__10_673(01)__10_668(01)__10_663(01)__10_658(01)__10_653(01)__10_648(01)__10_643(01)__10_638(01)__10_633(01)__10_628(01)__10_623(01)__10_618(01)__10_613(01)__10_608(01)__10_603(01)__10_598(01)__10_593(01)__10_588(01)__10_583(01)__10_578(01)__10_573(01)__10_568(01)__10_563(01)__10_558(01)__10_553(01)__10_548(01)__10_543(01)__10_538(01)__10_533(01)__10_528(01)__10_523(01)__10_518(01)__10_513(01)__10_508(01)__10_503(01)__10_498(01)__10_493(01)__10_488(01)__10_483(01)__10_478(01)__10_473(01)__10_468(01)__10_463(01)__10_458(01)__10_453(01)__10_448(01)__10_443(01)__10_438(01)__10_433(01)__10_428(01)__10_423(01)__10_418(01)__10_413(01)__10_408(01)__10_403(01)__10_398(01)__10_393(01)__10_388(01)__10_383(01)__10_378(01)__10_373(01)__10_368(01)__10_363(01)__10_358(01)__10_353(01)__10_348(01)__10_343(01)__10_338(01)__10_333(01)__10_328(01)__10_323(01)__10_318(01)__10_5(10)|WCLK    ram_4096x20          0                  2.655        6672          (289,2)
+
+######################################################################
+Path Detail Report (Axi0Clk vs SysClk)
+######################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : edb_top_inst/DdrTest/vio_core_inst/DdrResetCtrl~FF|CLK
+Path End      : ResetShiftReg[0]~FF|D
+Launch Clock  : Axi0Clk (RISE)
+Capture Clock : SysClk (RISE)
+Slack         : 0.64  (arrival time - required time)
+Delay         : 0.559
+
+Logic Level : 1
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 2.655
++ Clock To Q + Data Path Delay : 0.7
+--------------------------------------------
+End-of-path arrival time       : 3.355
+
+Constraint                     : 0
++ Capture Clock Path Delay     : 2.655
++ Clock Uncertainty            : 0.06
+--------------------------------------------
+End-of-path required time      : 2.715
+
+
+Launch Clock Path
+pin name                                                  model name    delay (ns)   cumulative delay (ns)    pins on net   location
+=====================================================================================================================================
+ Axi0Clk                                                   inpad               0                      0           2          (338,320)
+ Axi0Clk                                                   inpad             0.1                    0.1           2          (338,320)
+ Axi0Clk                                                   io                  0                    0.1           2          (338,320)
+   Routing elements:  
+     Manhattan distance of X:1, Y:0
+ CLKBUF__1|IO_in                                           gbuf_block       0.16                   0.26           2          (337,320)
+ CLKBUF__1|I                                               gbuf            2.395                  2.655           2          (337,320)
+ CLKBUF__1|O                                               gbuf                0                  2.655        6672          (337,320)
+ CLKBUF__1|clkout                                          gbuf_block          0                  2.655        6672          (337,320)
+ edb_top_inst/DdrTest/vio_core_inst/DdrResetCtrl~FF|CLK    ff                  0                  2.655        6672          (324,309)
+
+Data Path
+pin name                                                    model name    delay (ns)   cumulative delay (ns)    pins on net   location
+=======================================================================================================================================
+ edb_top_inst/DdrTest/vio_core_inst/DdrResetCtrl~FF|Q        ff               0.141                  0.141           3          (324,309)
+ edb_top_inst/DdrTest/vio_core_inst/DdrResetCtrl~FF|O_seq    eft              0.479                   0.62           3          (324,309)
+   Routing elements:  
+     Manhattan distance of X:10, Y:4
+ ResetShiftReg[0]~FF|I[2]                                    eft               0.08                    0.7           3          (334,305)
+ LUT__39524|in[2]                                            lut                  0                    0.7           3          (334,305)
+ LUT__39524|out                                              lut                  0                    0.7           2          (334,305)
+
+Capture Clock Path
+pin name                   model name    delay (ns)   cumulative delay (ns)    pins on net   location
+======================================================================================================
+ SysClk                     inpad               0                      0           2          (338,322)
+ SysClk                     inpad             0.1                    0.1           2          (338,322)
+ SysClk                     io                  0                    0.1           2          (338,322)
+   Routing elements:  
+     Manhattan distance of X:1, Y:0
+ CLKBUF__0|IO_in            gbuf_block       0.16                   0.26           2          (337,322)
+ CLKBUF__0|I                gbuf            2.395                  2.655           2          (337,322)
+ CLKBUF__0|O                gbuf                0                  2.655          64          (337,322)
+ CLKBUF__0|clkout           gbuf_block          0                  2.655          64          (337,322)
+ ResetShiftReg[0]~FF|CLK    ff                  0                  2.655          64          (334,305)
+
+######################################################################
+Path Detail Report (SysClk vs Axi0Clk)
+######################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : U0_DDR_Reset/DdrInitDone~FF|CLK
+Path End      : Axi0ResetReg[0]~FF|D
+Launch Clock  : SysClk (RISE)
+Capture Clock : Axi0Clk (RISE)
+Slack         : 0.686  (arrival time - required time)
+Delay         : 0.606
+
+Logic Level : 1
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 2.655
++ Clock To Q + Data Path Delay : 0.746
+--------------------------------------------
+End-of-path arrival time       : 3.401
+
+Constraint                     : 0
++ Capture Clock Path Delay     : 2.655
++ Clock Uncertainty            : 0.06
+--------------------------------------------
+End-of-path required time      : 2.715
+
+
+Launch Clock Path
+pin name                           model name    delay (ns)   cumulative delay (ns)    pins on net   location
+==============================================================================================================
+ SysClk                             inpad               0                      0           2          (338,322)
+ SysClk                             inpad             0.1                    0.1           2          (338,322)
+ SysClk                             io                  0                    0.1           2          (338,322)
+   Routing elements:  
+     Manhattan distance of X:1, Y:0
+ CLKBUF__0|IO_in                    gbuf_block       0.16                   0.26           2          (337,322)
+ CLKBUF__0|I                        gbuf            2.395                  2.655           2          (337,322)
+ CLKBUF__0|O                        gbuf                0                  2.655          64          (337,322)
+ CLKBUF__0|clkout                   gbuf_block          0                  2.655          64          (337,322)
+ U0_DDR_Reset/DdrInitDone~FF|CLK    ff                  0                  2.655          64          (334,386)
+
+Data Path
+pin name                             model name    delay (ns)   cumulative delay (ns)    pins on net   location
+================================================================================================================
+ U0_DDR_Reset/DdrInitDone~FF|Q        ff               0.141                  0.141           2          (334,386)
+ U0_DDR_Reset/DdrInitDone~FF|O_seq    eft              0.547                  0.688           2          (334,386)
+   Routing elements:  
+     Manhattan distance of X:0, Y:77
+ Axi0ResetReg[0]~FF|I[3]              eft              0.058                  0.746           2          (334,309)
+ LUT__39525|in[3]                     lut                  0                  0.746           2          (334,309)
+ LUT__39525|out                       lut                  0                  0.746           2          (334,309)
+
+Capture Clock Path
+pin name                  model name    delay (ns)   cumulative delay (ns)    pins on net   location
+=====================================================================================================
+ Axi0Clk                   inpad               0                      0           2          (338,320)
+ Axi0Clk                   inpad             0.1                    0.1           2          (338,320)
+ Axi0Clk                   io                  0                    0.1           2          (338,320)
+   Routing elements:  
+     Manhattan distance of X:1, Y:0
+ CLKBUF__1|IO_in           gbuf_block       0.16                   0.26           2          (337,320)
+ CLKBUF__1|I               gbuf            2.395                  2.655           2          (337,320)
+ CLKBUF__1|O               gbuf                0                  2.655        6672          (337,320)
+ CLKBUF__1|clkout          gbuf_block          0                  2.655        6672          (337,320)
+ Axi0ResetReg[0]~FF|CLK    ff                  0                  2.655        6672          (334,309)
+
+######################################################################
+Path Detail Report (SysClk vs SysClk)
+######################################################################
+
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin    : U0_DDR_Reset/cnt_start[0]~FF|CLK
+Path End      : U0_DDR_Reset/cnt_start[1]~FF|D
+Launch Clock  : SysClk (RISE)
+Capture Clock : SysClk (RISE)
+Slack         : 0.307  (arrival time - required time)
+Delay         : 0.226
+
+Logic Level : 1
+Non-global nets on path : 1
+Global nets on path     : 0
+
+Launch Clock Path Delay        : 2.655
++ Clock To Q + Data Path Delay : 0.367
+--------------------------------------------
+End-of-path arrival time       : 3.022
+
+Constraint                     : 0
++ Capture Clock Path Delay     : 2.655
++ Clock Uncertainty            : 0.06
+--------------------------------------------
+End-of-path required time      : 2.715
+
+
+Launch Clock Path
+pin name                            model name    delay (ns)   cumulative delay (ns)    pins on net   location
+===============================================================================================================
+ SysClk                              inpad               0                      0           2          (338,322)
+ SysClk                              inpad             0.1                    0.1           2          (338,322)
+ SysClk                              io                  0                    0.1           2          (338,322)
+   Routing elements:  
+     Manhattan distance of X:1, Y:0
+ CLKBUF__0|IO_in                     gbuf_block       0.16                   0.26           2          (337,322)
+ CLKBUF__0|I                         gbuf            2.395                  2.655           2          (337,322)
+ CLKBUF__0|O                         gbuf                0                  2.655          64          (337,322)
+ CLKBUF__0|clkout                    gbuf_block          0                  2.655          64          (337,322)
+ U0_DDR_Reset/cnt_start[0]~FF|CLK    ff                  0                  2.655          64          (336,264)
+
+Data Path
+pin name                              model name    delay (ns)   cumulative delay (ns)    pins on net   location
+=================================================================================================================
+ U0_DDR_Reset/cnt_start[0]~FF|Q        ff               0.141                  0.141           4          (336,264)
+ U0_DDR_Reset/cnt_start[0]~FF|O_seq    eft              0.168                  0.309           4          (336,264)
+   Routing elements:  
+     Manhattan distance of X:0, Y:1
+ U0_DDR_Reset/cnt_start[1]~FF|I[3]     eft              0.058                  0.367           4          (336,263)
+ LUT__39537|in[3]                      lut                  0                  0.367           4          (336,263)
+ LUT__39537|out                        lut                  0                  0.367           2          (336,263)
+
+Capture Clock Path
+pin name                            model name    delay (ns)   cumulative delay (ns)    pins on net   location
+===============================================================================================================
+ SysClk                              inpad               0                      0           2          (338,322)
+ SysClk                              inpad             0.1                    0.1           2          (338,322)
+ SysClk                              io                  0                    0.1           2          (338,322)
+   Routing elements:  
+     Manhattan distance of X:1, Y:0
+ CLKBUF__0|IO_in                     gbuf_block       0.16                   0.26           2          (337,322)
+ CLKBUF__0|I                         gbuf            2.395                  2.655           2          (337,322)
+ CLKBUF__0|O                         gbuf                0                  2.655          64          (337,322)
+ CLKBUF__0|clkout                    gbuf_block          0                  2.655          64          (337,322)
+ U0_DDR_Reset/cnt_start[1]~FF|CLK    ff                  0                  2.655          64          (336,263)
+
+---------- Path Details for Min Critical Paths (end) ---------------

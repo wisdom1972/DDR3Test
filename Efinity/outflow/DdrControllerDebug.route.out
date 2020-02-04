@@ -1,0 +1,117 @@
+
+Efinix FPGA Placement and Routing.
+Version: 2019.3.272.1.6 
+Compiled: Jan 16 2020.
+
+Copyright (C) 2013 - 2019 Efinix Inc. All rights reserved.
+
+
+The Tool Is Based on VPR of University of Toronto,
+a free open source code under MIT license.
+
+
+Running Placement and Routing for Family "Trion", Device "T120F484" ...
+
+***** Beginning stage routing graph generation ... *****
+Finished parsing ipin pattern file '/home/wisdom/2019.3/arch/./ipin_oph.xdb'.
+Finished parsing switch_block file '/home/wisdom/2019.3/arch/./sb_connectivity_subset.xdb'.
+Generated 6642678 RR nodes and 25235214 RR edges
+This design has 0 global control net(s). See /home/wisdom/2019.3/project/DDR3Test/Efinity/outflow/DdrControllerDebug.route.rpt for details.
+Routing graph took 27.9446 seconds.
+	Routing graph took 27.94 seconds (approximately) in total CPU time.
+Routing graph virtual memory usage: begin = 1290.3 MB, end = 3419.34 MB, delta = 2129.03 MB
+Routing graph resident set memory usage: begin = 650.764 MB, end = 2780.16 MB, delta = 2129.4 MB
+	Routing graph peak resident set memory usage = 2994.06 MB
+***** Ending stage routing graph generation *****
+***** Beginning stage routing ... *****
+WARNING(1): There are 3442 pins with no clock driven by root clock: jtag_inst1_TCK
+Peak routing utilization for Horizontal Left: 0.566022 at (308,116)
+Peak routing utilization for Horizontal Right: 0.427608 at (333,320)
+Peak routing utilization for Vertical Down: 1.075317 at (334,183)
+Peak routing utilization for Vertical Up: 1.760196 at (336,56)
+Peak routing congestion: 0.553837 at (336,158)
+V Congestion RMS: 0.116756 STDEV: 0.080248
+H Congestion RMS: 0.087891 STDEV: 0.048746
+
+ ---------      -------     --------------      -------------
+ Iteration      Overuse     Crit Path (ns)      Calc Time (s)
+ ---------      -------     --------------      -------------
+Routed wire in iteration 1: 1578471
+Delay frac statistics: min = 0.249167 max = 1.970487 average = 0.634454
+         1        53043              8.041               15.2
+Routed wire in iteration 2: 1145904
+         2         5316              8.209               11.4
+Routed wire in iteration 3: 1186471
+         3         1798              8.106               7.44
+Routed wire in iteration 4: 1197612
+         4          528              8.106                3.8
+Routed wire in iteration 5: 1200500
+         5          159              8.106               2.66
+Routed wire in iteration 6: 1201848
+         6           50              8.106               1.97
+Routed wire in iteration 7: 1202059
+         7           17              7.975               2.27
+Routed wire in iteration 8: 1202162
+         8            7              7.975               1.48
+Routed wire in iteration 9: 1202144
+         9            3              7.975               1.43
+Routed wire in iteration 10: 1202233
+        10            0              7.975               1.42
+
+Successfully routed netlist after 10 routing iterations and 131998512 heapops
+Completed net delay value cross check successfully.
+
+***** Beginning stage routing check ... *****
+***** Ending stage routing check *****
+
+Serial number (magic cookie) for the routing is: 624549392
+Netlist fully routed.
+
+Successfully created FPGA route file '/home/wisdom/2019.3/project/DDR3Test/Efinity/outflow/DdrControllerDebug.route'
+Routing took 52.2224 seconds.
+	Routing took 52.22 seconds (approximately) in total CPU time.
+Routing virtual memory usage: begin = 3419.34 MB, end = 3483.74 MB, delta = 64.408 MB
+Routing resident set memory usage: begin = 2780.16 MB, end = 2844.56 MB, delta = 64.392 MB
+	Routing peak resident set memory usage = 3182.06 MB
+***** Ending stage routing *****
+***** Beginning stage final timing analysis ... *****
+WARNING(2): There are 3442 pins with no clock driven by root clock: jtag_inst1_TCK
+
+NOTE: The timing data is not final.
+
+Maximum possible analyzed clocks frequency
+Clock Name      Period (ns)   Frequency (MHz)   Edge
+Axi0Clk             8.008         124.880     (R-R)
+SysClk              4.633         215.851     (R-R)
+
+Geomean max period: 6.091
+
+Launch Clock    Capture Clock    Constraint (ns)   Slack (ns)    Edge
+Axi0Clk          Axi0Clk               4.000        -4.008     (R-R)
+Axi0Clk          SysClk                4.000        -3.346     (R-R)
+SysClk           Axi0Clk               4.000        -4.095     (R-R)
+SysClk           SysClk                4.000        -0.633     (R-R)
+
+
+WARNING(3): There are 3442 pins with no clock driven by root clock: jtag_inst1_TCK
+final timing analysis took 1.70143 seconds.
+	final timing analysis took 1.7 seconds (approximately) in total CPU time.
+final timing analysis virtual memory usage: begin = 3483.74 MB, end = 3483.74 MB, delta = 0 MB
+final timing analysis resident set memory usage: begin = 2844.56 MB, end = 2844.56 MB, delta = 0 MB
+	final timing analysis peak resident set memory usage = 3182.06 MB
+***** Ending stage final timing analysis *****
+***** Beginning stage bitstream generation ... *****
+Reading core interface constraints from '/home/wisdom/2019.3/project/DDR3Test/Efinity/outflow/DdrControllerDebug.interface.csv'.
+Successfully processed interface constraints file "/home/wisdom/2019.3/project/DDR3Test/Efinity/outflow/DdrControllerDebug.interface.csv".
+Finished writing bitstream file /home/wisdom/2019.3/project/DDR3Test/Efinity/work_pnr/DdrControllerDebug.lbf.
+Bitstream generation took 2.91359 seconds.
+	Bitstream generation took 2.91 seconds (approximately) in total CPU time.
+Bitstream generation virtual memory usage: begin = 3483.74 MB, end = 3602.31 MB, delta = 118.564 MB
+Bitstream generation resident set memory usage: begin = 2844.56 MB, end = 2963.42 MB, delta = 118.868 MB
+	Bitstream generation peak resident set memory usage = 3182.06 MB
+***** Ending stage bitstream generation *****
+The entire flow of EFX_PNR took 210.015 seconds.
+	The entire flow of EFX_PNR took 210.01 seconds (approximately) in total CPU time.
+The entire flow of EFX_PNR virtual memory usage: begin = 133.756 MB, end = 2466.01 MB, delta = 2332.25 MB
+The entire flow of EFX_PNR resident set memory usage: begin = 16.572 MB, end = 1827.25 MB, delta = 1810.68 MB
+	The entire flow of EFX_PNR peak resident set memory usage = 3182.06 MB

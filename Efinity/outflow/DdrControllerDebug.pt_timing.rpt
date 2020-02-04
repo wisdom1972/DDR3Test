@@ -1,0 +1,55 @@
+
+Efinity Interface Designer Timing Report
+Version: 2019.3.272
+Date: 2020-02-04 11:33
+
+Copyright (C) 2017 - 2019 Efinix Inc. All rights reserved.
+
+Device: T120F484
+Project: DdrControllerDebug
+Timing Model: C4 (preliminary)
+              NOTE: The timing data is not final
+
+---------- 1. PLL Timing Report (begin) ----------
+
++---------+-------------+-----------------------+
+|  Clock  | Period (ns) | Phase Shift (degrees) |
++---------+-------------+-----------------------+
+|  DdrClk |     2.50    |           0           |
+| Axi0Clk |    10.00    |           0           |
+| Axi1Clk |    10.00    |           0           |
+|  SysClk |    10.00    |           0           |
++---------+-------------+-----------------------+
+
+---------- PLL Timing Report (end) ----------
+
+---------- 2. GPIO Timing Report (begin) ----------
+
+Non-registered GPIO Configuration:
+===================================
+
++---------------+----------+-----------+----------+----------+
+| Instance Name | Pin Name | Parameter | Max (ns) | Min (ns) |
++---------------+----------+-----------+----------+----------+
+|     LED[0]    |  LED[0]  |  GPIO_OUT |  3.659   |  1.829   |
+|     LED[1]    |  LED[1]  |  GPIO_OUT |  3.659   |  1.829   |
+|     LED[2]    |  LED[2]  |  GPIO_OUT |  3.659   |  1.829   |
+|     LED[3]    |  LED[3]  |  GPIO_OUT |  3.659   |  1.829   |
+|     LED[4]    |  LED[4]  |  GPIO_OUT |  3.659   |  1.829   |
+|     LED[5]    |  LED[5]  |  GPIO_OUT |  3.659   |  1.829   |
+|     LED[6]    |  LED[6]  |  GPIO_OUT |  3.659   |  1.829   |
+|     LED[7]    |  LED[7]  |  GPIO_OUT |  3.659   |  1.829   |
++---------------+----------+-----------+----------+----------+
+
+---------- GPIO Timing Report (end) ----------
+
+---------- 3. JTAG Timing Report (begin) ----------
+
++---------------+----------------+-----------+----------+----------+
+| Instance Name |    Pin Name    | Parameter | Max (ns) | Min (ns) |
++---------------+----------------+-----------+----------+----------+
+|   jtag_inst1  | jtag_inst1_TDI |  JTAG_IN  |  2.415   |  1.208   |
+|   jtag_inst1  | jtag_inst1_TMS |  JTAG_IN  |  1.755   |  0.877   |
++---------------+----------------+-----------+----------+----------+
+
+---------- JTAG Timing Report (end) ----------

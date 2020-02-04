@@ -1,0 +1,12 @@
+
+Efinix FPGA Placement and Routing.
+Version: 2019.3.272.1.6 
+Date: Tue Feb  4 11:35:46 2020
+
+Copyright (C) 2013 - 2019 Efinix Inc. All rights reserved.
+ 
+Family: Trion 
+Device: T120F484
+Top-level Entity Name: DdrControllerDebug
+Elapsed time for routing: 0 hours 0 minutes 52 seconds
+Elapsed time for entire flow: 0 hours 3 minutes 30 seconds

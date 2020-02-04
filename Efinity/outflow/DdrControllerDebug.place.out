@@ -1,0 +1,777 @@
+
+Efinix FPGA Placement and Routing.
+Version: 2019.3.272.1.6 
+Compiled: Jan 16 2020.
+
+Copyright (C) 2013 - 2019 Efinix Inc. All rights reserved.
+
+
+The Tool Is Based on VPR of University of Toronto,
+a free open source code under MIT license.
+
+
+Running Placement and Routing for Family "Trion", Device "T120F484" ...
+
+***** Beginning stage netlist pre-processing ... *****
+Successfully Read in Verific binary Netlist dump file "/home/wisdom/2019.3/project/DDR3Test/Efinity/DdrControllerDebug.vdb".
+***** Beginning VDB Netlist Checker ... *****
+VDB Netlist Checker took 5.54928 seconds.
+	VDB Netlist Checker took 5.55 seconds (approximately) in total CPU time.
+VDB Netlist Checker virtual memory usage: begin = 231.236 MB, end = 231.236 MB, delta = 0 MB
+VDB Netlist Checker resident set memory usage: begin = 118.96 MB, end = 118.96 MB, delta = 0 MB
+	VDB Netlist Checker peak resident set memory usage = 123.464 MB
+***** Ending VDB Netlist Checker ... *****
+Reading core interface constraints from '/home/wisdom/2019.3/project/DDR3Test/Efinity/outflow/DdrControllerDebug.interface.csv'.
+Successfully processed interface constraints file "/home/wisdom/2019.3/project/DDR3Test/Efinity/outflow/DdrControllerDebug.interface.csv".
+Creating interface clock buffer Axi1Clk~CLKBUF.
+Found 0 constant generator nets.
+Pass 0: Swept away 0 nets with no fanout.
+logical_block #1(jtag_inst1_DRCK) has no fanout.
+Removing input.
+logical_block #3(jtag_inst1_RUNTEST) has no fanout.
+Removing input.
+logical_block #8(jtag_inst1_TMS) has no fanout.
+Removing input.
+logical_block #376(DdrCtrl_RID_0[7]) has no fanout.
+Removing input.
+logical_block #377(DdrCtrl_RID_0[6]) has no fanout.
+Removing input.
+logical_block #378(DdrCtrl_RID_0[5]) has no fanout.
+Removing input.
+logical_block #379(DdrCtrl_RID_0[4]) has no fanout.
+Removing input.
+logical_block #380(DdrCtrl_RID_0[3]) has no fanout.
+Removing input.
+logical_block #381(DdrCtrl_RID_0[2]) has no fanout.
+Removing input.
+logical_block #382(DdrCtrl_RID_0[1]) has no fanout.
+Removing input.
+logical_block #383(DdrCtrl_RID_0[0]) has no fanout.
+Removing input.
+logical_block #643(DdrCtrl_RRESP_0[1]) has no fanout.
+Removing input.
+logical_block #644(DdrCtrl_RRESP_0[0]) has no fanout.
+Removing input.
+logical_block #645(DdrCtrl_BID_0[7]) has no fanout.
+Removing input.
+logical_block #646(DdrCtrl_BID_0[6]) has no fanout.
+Removing input.
+logical_block #647(DdrCtrl_BID_0[5]) has no fanout.
+Removing input.
+logical_block #648(DdrCtrl_BID_0[4]) has no fanout.
+Removing input.
+logical_block #649(DdrCtrl_BID_0[3]) has no fanout.
+Removing input.
+logical_block #650(DdrCtrl_BID_0[2]) has no fanout.
+Removing input.
+logical_block #651(DdrCtrl_BID_0[1]) has no fanout.
+Removing input.
+logical_block #652(DdrCtrl_BID_0[0]) has no fanout.
+Removing input.
+logical_block #711(DdrCtrl_AREADY_1) has no fanout.
+Removing input.
+logical_block #867(DdrCtrl_WREADY_1) has no fanout.
+Removing input.
+logical_block #868(DdrCtrl_RID_1[7]) has no fanout.
+Removing input.
+logical_block #869(DdrCtrl_RID_1[6]) has no fanout.
+Removing input.
+logical_block #870(DdrCtrl_RID_1[5]) has no fanout.
+Removing input.
+logical_block #871(DdrCtrl_RID_1[4]) has no fanout.
+Removing input.
+logical_block #872(DdrCtrl_RID_1[3]) has no fanout.
+Removing input.
+logical_block #873(DdrCtrl_RID_1[2]) has no fanout.
+Removing input.
+logical_block #874(DdrCtrl_RID_1[1]) has no fanout.
+Removing input.
+logical_block #875(DdrCtrl_RID_1[0]) has no fanout.
+Removing input.
+logical_block #876(DdrCtrl_RDATA_1[127]) has no fanout.
+Removing input.
+logical_block #877(DdrCtrl_RDATA_1[126]) has no fanout.
+Removing input.
+logical_block #878(DdrCtrl_RDATA_1[125]) has no fanout.
+Removing input.
+logical_block #879(DdrCtrl_RDATA_1[124]) has no fanout.
+Removing input.
+logical_block #880(DdrCtrl_RDATA_1[123]) has no fanout.
+Removing input.
+logical_block #881(DdrCtrl_RDATA_1[122]) has no fanout.
+Removing input.
+logical_block #882(DdrCtrl_RDATA_1[121]) has no fanout.
+Removing input.
+logical_block #883(DdrCtrl_RDATA_1[120]) has no fanout.
+Removing input.
+logical_block #884(DdrCtrl_RDATA_1[119]) has no fanout.
+Removing input.
+logical_block #885(DdrCtrl_RDATA_1[118]) has no fanout.
+Removing input.
+logical_block #886(DdrCtrl_RDATA_1[117]) has no fanout.
+Removing input.
+logical_block #887(DdrCtrl_RDATA_1[116]) has no fanout.
+Removing input.
+logical_block #888(DdrCtrl_RDATA_1[115]) has no fanout.
+Removing input.
+logical_block #889(DdrCtrl_RDATA_1[114]) has no fanout.
+Removing input.
+logical_block #890(DdrCtrl_RDATA_1[113]) has no fanout.
+Removing input.
+logical_block #891(DdrCtrl_RDATA_1[112]) has no fanout.
+Removing input.
+logical_block #892(DdrCtrl_RDATA_1[111]) has no fanout.
+Removing input.
+logical_block #893(DdrCtrl_RDATA_1[110]) has no fanout.
+Removing input.
+logical_block #894(DdrCtrl_RDATA_1[109]) has no fanout.
+Removing input.
+logical_block #895(DdrCtrl_RDATA_1[108]) has no fanout.
+Removing input.
+logical_block #896(DdrCtrl_RDATA_1[107]) has no fanout.
+Removing input.
+logical_block #897(DdrCtrl_RDATA_1[106]) has no fanout.
+Removing input.
+logical_block #898(DdrCtrl_RDATA_1[105]) has no fanout.
+Removing input.
+logical_block #899(DdrCtrl_RDATA_1[104]) has no fanout.
+Removing input.
+logical_block #900(DdrCtrl_RDATA_1[103]) has no fanout.
+Removing input.
+logical_block #901(DdrCtrl_RDATA_1[102]) has no fanout.
+Removing input.
+logical_block #902(DdrCtrl_RDATA_1[101]) has no fanout.
+Removing input.
+logical_block #903(DdrCtrl_RDATA_1[100]) has no fanout.
+Removing input.
+logical_block #904(DdrCtrl_RDATA_1[99]) has no fanout.
+Removing input.
+logical_block #905(DdrCtrl_RDATA_1[98]) has no fanout.
+Removing input.
+logical_block #906(DdrCtrl_RDATA_1[97]) has no fanout.
+Removing input.
+logical_block #907(DdrCtrl_RDATA_1[96]) has no fanout.
+Removing input.
+logical_block #908(DdrCtrl_RDATA_1[95]) has no fanout.
+Removing input.
+logical_block #909(DdrCtrl_RDATA_1[94]) has no fanout.
+Removing input.
+logical_block #910(DdrCtrl_RDATA_1[93]) has no fanout.
+Removing input.
+logical_block #911(DdrCtrl_RDATA_1[92]) has no fanout.
+Removing input.
+logical_block #912(DdrCtrl_RDATA_1[91]) has no fanout.
+Removing input.
+logical_block #913(DdrCtrl_RDATA_1[90]) has no fanout.
+Removing input.
+logical_block #914(DdrCtrl_RDATA_1[89]) has no fanout.
+Removing input.
+logical_block #915(DdrCtrl_RDATA_1[88]) has no fanout.
+Removing input.
+logical_block #916(DdrCtrl_RDATA_1[87]) has no fanout.
+Removing input.
+logical_block #917(DdrCtrl_RDATA_1[86]) has no fanout.
+Removing input.
+logical_block #918(DdrCtrl_RDATA_1[85]) has no fanout.
+Removing input.
+logical_block #919(DdrCtrl_RDATA_1[84]) has no fanout.
+Removing input.
+logical_block #920(DdrCtrl_RDATA_1[83]) has no fanout.
+Removing input.
+logical_block #921(DdrCtrl_RDATA_1[82]) has no fanout.
+Removing input.
+logical_block #922(DdrCtrl_RDATA_1[81]) has no fanout.
+Removing input.
+logical_block #923(DdrCtrl_RDATA_1[80]) has no fanout.
+Removing input.
+logical_block #924(DdrCtrl_RDATA_1[79]) has no fanout.
+Removing input.
+logical_block #925(DdrCtrl_RDATA_1[78]) has no fanout.
+Removing input.
+logical_block #926(DdrCtrl_RDATA_1[77]) has no fanout.
+Removing input.
+logical_block #927(DdrCtrl_RDATA_1[76]) has no fanout.
+Removing input.
+logical_block #928(DdrCtrl_RDATA_1[75]) has no fanout.
+Removing input.
+logical_block #929(DdrCtrl_RDATA_1[74]) has no fanout.
+Removing input.
+logical_block #930(DdrCtrl_RDATA_1[73]) has no fanout.
+Removing input.
+logical_block #931(DdrCtrl_RDATA_1[72]) has no fanout.
+Removing input.
+logical_block #932(DdrCtrl_RDATA_1[71]) has no fanout.
+Removing input.
+logical_block #933(DdrCtrl_RDATA_1[70]) has no fanout.
+Removing input.
+logical_block #934(DdrCtrl_RDATA_1[69]) has no fanout.
+Removing input.
+logical_block #935(DdrCtrl_RDATA_1[68]) has no fanout.
+Removing input.
+logical_block #936(DdrCtrl_RDATA_1[67]) has no fanout.
+Removing input.
+logical_block #937(DdrCtrl_RDATA_1[66]) has no fanout.
+Removing input.
+logical_block #938(DdrCtrl_RDATA_1[65]) has no fanout.
+Removing input.
+logical_block #939(DdrCtrl_RDATA_1[64]) has no fanout.
+Removing input.
+logical_block #940(DdrCtrl_RDATA_1[63]) has no fanout.
+Removing input.
+logical_block #941(DdrCtrl_RDATA_1[62]) has no fanout.
+Removing input.
+logical_block #942(DdrCtrl_RDATA_1[61]) has no fanout.
+Removing input.
+logical_block #943(DdrCtrl_RDATA_1[60]) has no fanout.
+Removing input.
+logical_block #944(DdrCtrl_RDATA_1[59]) has no fanout.
+Removing input.
+logical_block #945(DdrCtrl_RDATA_1[58]) has no fanout.
+Removing input.
+logical_block #946(DdrCtrl_RDATA_1[57]) has no fanout.
+Removing input.
+logical_block #947(DdrCtrl_RDATA_1[56]) has no fanout.
+Removing input.
+logical_block #948(DdrCtrl_RDATA_1[55]) has no fanout.
+Removing input.
+logical_block #949(DdrCtrl_RDATA_1[54]) has no fanout.
+Removing input.
+logical_block #950(DdrCtrl_RDATA_1[53]) has no fanout.
+Removing input.
+logical_block #951(DdrCtrl_RDATA_1[52]) has no fanout.
+Removing input.
+logical_block #952(DdrCtrl_RDATA_1[51]) has no fanout.
+Removing input.
+logical_block #953(DdrCtrl_RDATA_1[50]) has no fanout.
+Removing input.
+logical_block #954(DdrCtrl_RDATA_1[49]) has no fanout.
+Removing input.
+logical_block #955(DdrCtrl_RDATA_1[48]) has no fanout.
+Removing input.
+logical_block #956(DdrCtrl_RDATA_1[47]) has no fanout.
+Removing input.
+logical_block #957(DdrCtrl_RDATA_1[46]) has no fanout.
+Removing input.
+logical_block #958(DdrCtrl_RDATA_1[45]) has no fanout.
+Removing input.
+logical_block #959(DdrCtrl_RDATA_1[44]) has no fanout.
+Removing input.
+logical_block #960(DdrCtrl_RDATA_1[43]) has no fanout.
+Removing input.
+logical_block #961(DdrCtrl_RDATA_1[42]) has no fanout.
+Removing input.
+logical_block #962(DdrCtrl_RDATA_1[41]) has no fanout.
+Removing input.
+logical_block #963(DdrCtrl_RDATA_1[40]) has no fanout.
+Removing input.
+logical_block #964(DdrCtrl_RDATA_1[39]) has no fanout.
+Removing input.
+logical_block #965(DdrCtrl_RDATA_1[38]) has no fanout.
+Removing input.
+logical_block #966(DdrCtrl_RDATA_1[37]) has no fanout.
+Removing input.
+logical_block #967(DdrCtrl_RDATA_1[36]) has no fanout.
+Removing input.
+logical_block #968(DdrCtrl_RDATA_1[35]) has no fanout.
+Removing input.
+logical_block #969(DdrCtrl_RDATA_1[34]) has no fanout.
+Removing input.
+logical_block #970(DdrCtrl_RDATA_1[33]) has no fanout.
+Removing input.
+logical_block #971(DdrCtrl_RDATA_1[32]) has no fanout.
+Removing input.
+logical_block #972(DdrCtrl_RDATA_1[31]) has no fanout.
+Removing input.
+logical_block #973(DdrCtrl_RDATA_1[30]) has no fanout.
+Removing input.
+logical_block #974(DdrCtrl_RDATA_1[29]) has no fanout.
+Removing input.
+logical_block #975(DdrCtrl_RDATA_1[28]) has no fanout.
+Removing input.
+logical_block #976(DdrCtrl_RDATA_1[27]) has no fanout.
+Removing input.
+logical_block #977(DdrCtrl_RDATA_1[26]) has no fanout.
+Removing input.
+logical_block #978(DdrCtrl_RDATA_1[25]) has no fanout.
+Removing input.
+logical_block #979(DdrCtrl_RDATA_1[24]) has no fanout.
+Removing input.
+logical_block #980(DdrCtrl_RDATA_1[23]) has no fanout.
+Removing input.
+logical_block #981(DdrCtrl_RDATA_1[22]) has no fanout.
+Removing input.
+logical_block #982(DdrCtrl_RDATA_1[21]) has no fanout.
+Removing input.
+logical_block #983(DdrCtrl_RDATA_1[20]) has no fanout.
+Removing input.
+logical_block #984(DdrCtrl_RDATA_1[19]) has no fanout.
+Removing input.
+logical_block #985(DdrCtrl_RDATA_1[18]) has no fanout.
+Removing input.
+logical_block #986(DdrCtrl_RDATA_1[17]) has no fanout.
+Removing input.
+logical_block #987(DdrCtrl_RDATA_1[16]) has no fanout.
+Removing input.
+logical_block #988(DdrCtrl_RDATA_1[15]) has no fanout.
+Removing input.
+logical_block #989(DdrCtrl_RDATA_1[14]) has no fanout.
+Removing input.
+logical_block #990(DdrCtrl_RDATA_1[13]) has no fanout.
+Removing input.
+logical_block #991(DdrCtrl_RDATA_1[12]) has no fanout.
+Removing input.
+logical_block #992(DdrCtrl_RDATA_1[11]) has no fanout.
+Removing input.
+logical_block #993(DdrCtrl_RDATA_1[10]) has no fanout.
+Removing input.
+logical_block #994(DdrCtrl_RDATA_1[9]) has no fanout.
+Removing input.
+logical_block #995(DdrCtrl_RDATA_1[8]) has no fanout.
+Removing input.
+logical_block #996(DdrCtrl_RDATA_1[7]) has no fanout.
+Removing input.
+logical_block #997(DdrCtrl_RDATA_1[6]) has no fanout.
+Removing input.
+logical_block #998(DdrCtrl_RDATA_1[5]) has no fanout.
+Removing input.
+logical_block #999(DdrCtrl_RDATA_1[4]) has no fanout.
+Removing input.
+logical_block #1000(DdrCtrl_RDATA_1[3]) has no fanout.
+Removing input.
+logical_block #1001(DdrCtrl_RDATA_1[2]) has no fanout.
+Removing input.
+logical_block #1002(DdrCtrl_RDATA_1[1]) has no fanout.
+Removing input.
+logical_block #1003(DdrCtrl_RDATA_1[0]) has no fanout.
+Removing input.
+logical_block #1004(DdrCtrl_RLAST_1) has no fanout.
+Removing input.
+logical_block #1005(DdrCtrl_RVALID_1) has no fanout.
+Removing input.
+logical_block #1007(DdrCtrl_RRESP_1[1]) has no fanout.
+Removing input.
+logical_block #1008(DdrCtrl_RRESP_1[0]) has no fanout.
+Removing input.
+logical_block #1009(DdrCtrl_BID_1[7]) has no fanout.
+Removing input.
+logical_block #1010(DdrCtrl_BID_1[6]) has no fanout.
+Removing input.
+logical_block #1011(DdrCtrl_BID_1[5]) has no fanout.
+Removing input.
+logical_block #1012(DdrCtrl_BID_1[4]) has no fanout.
+Removing input.
+logical_block #1013(DdrCtrl_BID_1[3]) has no fanout.
+Removing input.
+logical_block #1014(DdrCtrl_BID_1[2]) has no fanout.
+Removing input.
+logical_block #1015(DdrCtrl_BID_1[1]) has no fanout.
+Removing input.
+logical_block #1016(DdrCtrl_BID_1[0]) has no fanout.
+Removing input.
+logical_block #1017(DdrCtrl_BVALID_1) has no fanout.
+Removing input.
+Pass 0: Swept away 172 blocks with no fanout.
+Pass 1: Swept away 0 nets with no fanout.
+Pass 1: Swept away 0 blocks with no fanout.
+Swept away 0 nets and 172 blocks in total.
+Removed 0 LUT buffers.
+Sweeped away 172 nodes.
+Successfully created VPR logical netlist from Verific binary DataBase file "/home/wisdom/2019.3/project/DDR3Test/Efinity/DdrControllerDebug.vdb".
+Netlist pre-processing took 6.88502 seconds.
+	Netlist pre-processing took 6.88 seconds (approximately) in total CPU time.
+Netlist pre-processing virtual memory usage: begin = 152.16 MB, end = 278.128 MB, delta = 125.968 MB
+Netlist pre-processing resident set memory usage: begin = 40 MB, end = 166.68 MB, delta = 126.68 MB
+	Netlist pre-processing peak resident set memory usage = 166.68 MB
+***** Ending stage netlist pre-processing *****
+***** Beginning stage packing ... *****
+***** Beginning stage pre-packing ... *****
+***** Ending stage pre-packing *****
+Generate proto netlist for file "/home/wisdom/2019.3/project/DDR3Test/Efinity/work_pnr/DdrControllerDebug.net_proto" took 0.032566 seconds
+Creating IO constraints file '/home/wisdom/2019.3/project/DDR3Test/Efinity/work_pnr/DdrControllerDebug.io_place'
+Packing took 3.96512 seconds.
+	Packing took 3.97 seconds (approximately) in total CPU time.
+Packing virtual memory usage: begin = 277.548 MB, end = 470.764 MB, delta = 193.216 MB
+Packing resident set memory usage: begin = 166.256 MB, end = 359.344 MB, delta = 193.088 MB
+	Packing peak resident set memory usage = 359.344 MB
+***** Ending stage packing *****
+***** Beginning stage packed netlist loading ... *****
+Read proto netlist file /home/wisdom/2019.3/project/DDR3Test/Efinity/work_pnr/DdrControllerDebug.net_proto
+Read proto netlist for file "/home/wisdom/2019.3/project/DDR3Test/Efinity/work_pnr/DdrControllerDebug.net_proto" took 0.008729 seconds
+Setup net and block data structure took 0.491197 seconds
+Packed netlist loading took 0.51419 seconds.
+	Packed netlist loading took 0.51 seconds (approximately) in total CPU time.
+Packed netlist loading virtual memory usage: begin = 470.764 MB, end = 470.764 MB, delta = 0 MB
+Packed netlist loading resident set memory usage: begin = 359.344 MB, end = 359.344 MB, delta = 0 MB
+	Packed netlist loading peak resident set memory usage = 359.344 MB
+***** Ending stage packed netlist loading *****
+***** Beginning stage pre-placement ... *****
+
+***** Ending stage pre-placement *****
+WARNING(1): [SDC line 15] Clock name or regular expression (DdrClk) does not correspond to any nets.
+If you'd like to create a virtual clock, use the '-name' keyword without providing any target clock.
+Unable to create clock due to warning found
+WARNING(2): [SDC line 49] Specified get_ports name or regular expression "jtag_inst1_RUNTEST" does not correspond to any ports.
+WARNING(3): [SDC line 50] Specified get_ports name or regular expression "jtag_inst1_RUNTEST" does not correspond to any ports.
+No ports found in design
+No ports found in design
+No ports found in design
+No ports found in design
+WARNING(4): [SDC line 102] Specified get_ports name or regular expression "DdrCtrl_RRESP_0[1]" does not correspond to any ports.
+WARNING(5): [SDC line 102] Specified get_ports name or regular expression "DdrCtrl_RRESP_0[0]" does not correspond to any ports.
+WARNING(6): [SDC line 103] Specified get_ports name or regular expression "DdrCtrl_RRESP_0[1]" does not correspond to any ports.
+WARNING(7): [SDC line 103] Specified get_ports name or regular expression "DdrCtrl_RRESP_0[0]" does not correspond to any ports.
+WARNING(8): [SDC line 138] Specified get_ports name or regular expression "DdrCtrl_AREADY_1" does not correspond to any ports.
+WARNING(9): [SDC line 139] Specified get_ports name or regular expression "DdrCtrl_AREADY_1" does not correspond to any ports.
+No ports found in design
+No ports found in design
+WARNING(10): [SDC line 142] Specified get_ports name or regular expression "DdrCtrl_BVALID_1" does not correspond to any ports.
+WARNING(11): [SDC line 143] Specified get_ports name or regular expression "DdrCtrl_BVALID_1" does not correspond to any ports.
+No ports found in design
+No ports found in design
+No ports found in design
+No ports found in design
+WARNING(12): [SDC line 148] Specified get_ports name or regular expression "DdrCtrl_RLAST_1" does not correspond to any ports.
+WARNING(13): [SDC line 149] Specified get_ports name or regular expression "DdrCtrl_RLAST_1" does not correspond to any ports.
+WARNING(14): [SDC line 150] Specified get_ports name or regular expression "DdrCtrl_RRESP_1[1]" does not correspond to any ports.
+WARNING(15): [SDC line 150] Specified get_ports name or regular expression "DdrCtrl_RRESP_1[0]" does not correspond to any ports.
+WARNING(16): [SDC line 151] Specified get_ports name or regular expression "DdrCtrl_RRESP_1[1]" does not correspond to any ports.
+WARNING(17): [SDC line 151] Specified get_ports name or regular expression "DdrCtrl_RRESP_1[0]" does not correspond to any ports.
+WARNING(18): [SDC line 152] Specified get_ports name or regular expression "DdrCtrl_RVALID_1" does not correspond to any ports.
+WARNING(19): [SDC line 153] Specified get_ports name or regular expression "DdrCtrl_RVALID_1" does not correspond to any ports.
+WARNING(20): [SDC line 154] Specified get_ports name or regular expression "DdrCtrl_WREADY_1" does not correspond to any ports.
+WARNING(21): [SDC line 155] Specified get_ports name or regular expression "DdrCtrl_WREADY_1" does not correspond to any ports.
+WARNING(22): [SDC line 45] Input jtag_inst1_CAPTURE is associated with an unconstrained clock jtag_inst1_TCK.
+WARNING(23): [SDC line 46] Input jtag_inst1_CAPTURE is associated with an unconstrained clock jtag_inst1_TCK.
+WARNING(24): [SDC line 47] Input jtag_inst1_RESET is associated with an unconstrained clock jtag_inst1_TCK.
+WARNING(25): [SDC line 48] Input jtag_inst1_RESET is associated with an unconstrained clock jtag_inst1_TCK.
+WARNING(26): [SDC line 51] Input jtag_inst1_SEL is associated with an unconstrained clock jtag_inst1_TCK.
+WARNING(27): [SDC line 52] Input jtag_inst1_SEL is associated with an unconstrained clock jtag_inst1_TCK.
+WARNING(28): [SDC line 53] Input jtag_inst1_UPDATE is associated with an unconstrained clock jtag_inst1_TCK.
+WARNING(29): [SDC line 54] Input jtag_inst1_UPDATE is associated with an unconstrained clock jtag_inst1_TCK.
+WARNING(30): [SDC line 55] Input jtag_inst1_SHIFT is associated with an unconstrained clock jtag_inst1_TCK.
+WARNING(31): [SDC line 56] Input jtag_inst1_SHIFT is associated with an unconstrained clock jtag_inst1_TCK.
+WARNING(32): Ignoring input constraints that were set with invalid clock.
+WARNING(33): [SDC line 43] Output jtag_inst1_TDO is associated with an unconstrained clock jtag_inst1_TCK.
+WARNING(34): [SDC line 44] Output jtag_inst1_TDO is associated with an unconstrained clock jtag_inst1_TCK.
+WARNING(35): Ignoring output constraints that were set with invalid clock.
+
+SDC file '/home/wisdom/2019.3/project/DDR3Test/Efinity/DdrControllerDebug.sdc' parsed successfully.
+3 clocks (including virtual clocks), 522 inputs and 1140 outputs were constrained.
+
+WARNING(36): There are 3442 pins with no clock driven by root clock: jtag_inst1_TCK
+***** Beginning stage initial placement ... *****
+Reading core interface constraints from '/home/wisdom/2019.3/project/DDR3Test/Efinity/outflow/DdrControllerDebug.interface.csv'.
+Successfully processed interface constraints file "/home/wisdom/2019.3/project/DDR3Test/Efinity/outflow/DdrControllerDebug.interface.csv".
+Writing IO placement constraints to '/home/wisdom/2019.3/project/DDR3Test/Efinity/outflow/DdrControllerDebug.interface.io'.
+
+Reading placement constraints from '/home/wisdom/2019.3/project/DDR3Test/Efinity/outflow/DdrControllerDebug.interface.io'.
+WARNING(37): [Line 13] Block jtag_inst1_DRCK invalid, no such block.
+WARNING(38): [Line 15] Block jtag_inst1_TMS invalid, no such block.
+WARNING(39): [Line 18] Block jtag_inst1_RUNTEST invalid, no such block.
+WARNING(40): [Line 454] Block DdrCtrl_BID_0[0] invalid, no such block.
+WARNING(41): [Line 458] Block DdrCtrl_BID_0[1] invalid, no such block.
+WARNING(42): [Line 462] Block DdrCtrl_BID_0[2] invalid, no such block.
+WARNING(43): [Line 466] Block DdrCtrl_BID_0[3] invalid, no such block.
+WARNING(44): [Line 470] Block DdrCtrl_BID_0[4] invalid, no such block.
+WARNING(45): [Line 474] Block DdrCtrl_BID_0[5] invalid, no such block.
+WARNING(46): [Line 478] Block DdrCtrl_BID_0[6] invalid, no such block.
+WARNING(47): [Line 482] Block DdrCtrl_BID_0[7] invalid, no such block.
+WARNING(48): [Line 519] Block DdrCtrl_RID_0[0] invalid, no such block.
+WARNING(49): [Line 523] Block DdrCtrl_RID_0[1] invalid, no such block.
+WARNING(50): [Line 527] Block DdrCtrl_RID_0[2] invalid, no such block.
+WARNING(51): [Line 531] Block DdrCtrl_RID_0[3] invalid, no such block.
+WARNING(52): [Line 535] Block DdrCtrl_RID_0[4] invalid, no such block.
+WARNING(53): [Line 539] Block DdrCtrl_RID_0[5] invalid, no such block.
+WARNING(54): [Line 543] Block DdrCtrl_RID_0[6] invalid, no such block.
+WARNING(55): [Line 547] Block DdrCtrl_RID_0[7] invalid, no such block.
+WARNING(56): [Line 555] Block DdrCtrl_RRESP_0[0] invalid, no such block.
+WARNING(57): [Line 559] Block DdrCtrl_RRESP_0[1] invalid, no such block.
+WARNING(58): [Line 687] Block DdrCtrl_RDATA_1[0] invalid, no such block.
+WARNING(59): [Line 689] Block DdrCtrl_RDATA_1[1] invalid, no such block.
+WARNING(60): [Line 691] Block DdrCtrl_RDATA_1[2] invalid, no such block.
+WARNING(61): [Line 693] Block DdrCtrl_RDATA_1[3] invalid, no such block.
+WARNING(62): [Line 695] Block DdrCtrl_RDATA_1[4] invalid, no such block.
+WARNING(63): [Line 697] Block DdrCtrl_RDATA_1[5] invalid, no such block.
+WARNING(64): [Line 699] Block DdrCtrl_RDATA_1[6] invalid, no such block.
+WARNING(65): [Line 701] Block DdrCtrl_RDATA_1[7] invalid, no such block.
+WARNING(66): [Line 703] Block DdrCtrl_RDATA_1[8] invalid, no such block.
+WARNING(67): [Line 705] Block DdrCtrl_RDATA_1[9] invalid, no such block.
+WARNING(68): [Line 707] Block DdrCtrl_RDATA_1[10] invalid, no such block.
+WARNING(69): [Line 709] Block DdrCtrl_RDATA_1[11] invalid, no such block.
+WARNING(70): [Line 711] Block DdrCtrl_RDATA_1[12] invalid, no such block.
+WARNING(71): [Line 713] Block DdrCtrl_RDATA_1[13] invalid, no such block.
+WARNING(72): [Line 715] Block DdrCtrl_RDATA_1[14] invalid, no such block.
+WARNING(73): [Line 717] Block DdrCtrl_RDATA_1[15] invalid, no such block.
+WARNING(74): [Line 719] Block DdrCtrl_RDATA_1[16] invalid, no such block.
+WARNING(75): [Line 721] Block DdrCtrl_RDATA_1[17] invalid, no such block.
+WARNING(76): [Line 723] Block DdrCtrl_RDATA_1[18] invalid, no such block.
+WARNING(77): [Line 725] Block DdrCtrl_RDATA_1[19] invalid, no such block.
+WARNING(78): [Line 727] Block DdrCtrl_RDATA_1[20] invalid, no such block.
+WARNING(79): [Line 729] Block DdrCtrl_RDATA_1[21] invalid, no such block.
+WARNING(80): [Line 731] Block DdrCtrl_RDATA_1[22] invalid, no such block.
+WARNING(81): [Line 733] Block DdrCtrl_RDATA_1[23] invalid, no such block.
+WARNING(82): [Line 735] Block DdrCtrl_RDATA_1[24] invalid, no such block.
+WARNING(83): [Line 737] Block DdrCtrl_RDATA_1[25] invalid, no such block.
+WARNING(84): [Line 739] Block DdrCtrl_RDATA_1[26] invalid, no such block.
+WARNING(85): [Line 741] Block DdrCtrl_RDATA_1[27] invalid, no such block.
+WARNING(86): [Line 743] Block DdrCtrl_RDATA_1[28] invalid, no such block.
+WARNING(87): [Line 745] Block DdrCtrl_RDATA_1[29] invalid, no such block.
+WARNING(88): [Line 747] Block DdrCtrl_RDATA_1[30] invalid, no such block.
+WARNING(89): [Line 749] Block DdrCtrl_RDATA_1[31] invalid, no such block.
+WARNING(90): [Line 751] Block DdrCtrl_RDATA_1[32] invalid, no such block.
+WARNING(91): [Line 753] Block DdrCtrl_RDATA_1[33] invalid, no such block.
+WARNING(92): [Line 755] Block DdrCtrl_RDATA_1[34] invalid, no such block.
+WARNING(93): [Line 757] Block DdrCtrl_RDATA_1[35] invalid, no such block.
+WARNING(94): [Line 759] Block DdrCtrl_RDATA_1[36] invalid, no such block.
+WARNING(95): [Line 761] Block DdrCtrl_RDATA_1[37] invalid, no such block.
+WARNING(96): [Line 763] Block DdrCtrl_RDATA_1[38] invalid, no such block.
+WARNING(97): [Line 765] Block DdrCtrl_RDATA_1[39] invalid, no such block.
+WARNING(98): [Line 767] Block DdrCtrl_RDATA_1[40] invalid, no such block.
+WARNING(99): [Line 769] Block DdrCtrl_RDATA_1[41] invalid, no such block.
+WARNING(100): [Line 771] Block DdrCtrl_RDATA_1[42] invalid, no such block.
+WARNING(101): [Line 773] Block DdrCtrl_RDATA_1[43] invalid, no such block.
+WARNING(102): [Line 775] Block DdrCtrl_RDATA_1[44] invalid, no such block.
+WARNING(103): [Line 777] Block DdrCtrl_RDATA_1[45] invalid, no such block.
+WARNING(104): [Line 779] Block DdrCtrl_RDATA_1[46] invalid, no such block.
+WARNING(105): [Line 781] Block DdrCtrl_RDATA_1[47] invalid, no such block.
+WARNING(106): [Line 783] Block DdrCtrl_RDATA_1[48] invalid, no such block.
+WARNING(107): [Line 785] Block DdrCtrl_RDATA_1[49] invalid, no such block.
+WARNING(108): [Line 787] Block DdrCtrl_RDATA_1[50] invalid, no such block.
+WARNING(109): [Line 789] Block DdrCtrl_RDATA_1[51] invalid, no such block.
+WARNING(110): [Line 791] Block DdrCtrl_RDATA_1[52] invalid, no such block.
+WARNING(111): [Line 793] Block DdrCtrl_RDATA_1[53] invalid, no such block.
+WARNING(112): [Line 795] Block DdrCtrl_RDATA_1[54] invalid, no such block.
+WARNING(113): [Line 797] Block DdrCtrl_RDATA_1[55] invalid, no such block.
+WARNING(114): [Line 799] Block DdrCtrl_RDATA_1[56] invalid, no such block.
+WARNING(115): [Line 801] Block DdrCtrl_RDATA_1[57] invalid, no such block.
+WARNING(116): [Line 804] Block DdrCtrl_RDATA_1[58] invalid, no such block.
+WARNING(117): [Line 807] Block DdrCtrl_RDATA_1[59] invalid, no such block.
+WARNING(118): [Line 810] Block DdrCtrl_RDATA_1[60] invalid, no such block.
+WARNING(119): [Line 812] Block DdrCtrl_RDATA_1[61] invalid, no such block.
+WARNING(120): [Line 814] Block DdrCtrl_RDATA_1[62] invalid, no such block.
+WARNING(121): [Line 816] Block DdrCtrl_RDATA_1[63] invalid, no such block.
+WARNING(122): [Line 818] Block DdrCtrl_RDATA_1[64] invalid, no such block.
+WARNING(123): [Line 820] Block DdrCtrl_RDATA_1[65] invalid, no such block.
+WARNING(124): [Line 822] Block DdrCtrl_RDATA_1[66] invalid, no such block.
+WARNING(125): [Line 825] Block DdrCtrl_RDATA_1[67] invalid, no such block.
+WARNING(126): [Line 828] Block DdrCtrl_RDATA_1[68] invalid, no such block.
+WARNING(127): [Line 830] Block DdrCtrl_RDATA_1[69] invalid, no such block.
+WARNING(128): [Line 832] Block DdrCtrl_RDATA_1[70] invalid, no such block.
+WARNING(129): [Line 835] Block DdrCtrl_RDATA_1[71] invalid, no such block.
+WARNING(130): [Line 838] Block DdrCtrl_RDATA_1[72] invalid, no such block.
+WARNING(131): [Line 841] Block DdrCtrl_RDATA_1[73] invalid, no such block.
+WARNING(132): [Line 844] Block DdrCtrl_RDATA_1[74] invalid, no such block.
+WARNING(133): [Line 847] Block DdrCtrl_RDATA_1[75] invalid, no such block.
+WARNING(134): [Line 850] Block DdrCtrl_RDATA_1[76] invalid, no such block.
+WARNING(135): [Line 852] Block DdrCtrl_BID_1[0] invalid, no such block.
+WARNING(136): [Line 854] Block DdrCtrl_RDATA_1[77] invalid, no such block.
+WARNING(137): [Line 856] Block DdrCtrl_BID_1[1] invalid, no such block.
+WARNING(138): [Line 858] Block DdrCtrl_RDATA_1[78] invalid, no such block.
+WARNING(139): [Line 860] Block DdrCtrl_BID_1[2] invalid, no such block.
+WARNING(140): [Line 862] Block DdrCtrl_RDATA_1[79] invalid, no such block.
+WARNING(141): [Line 864] Block DdrCtrl_BID_1[3] invalid, no such block.
+WARNING(142): [Line 866] Block DdrCtrl_RDATA_1[80] invalid, no such block.
+WARNING(143): [Line 868] Block DdrCtrl_BID_1[4] invalid, no such block.
+WARNING(144): [Line 870] Block DdrCtrl_RDATA_1[81] invalid, no such block.
+WARNING(145): [Line 872] Block DdrCtrl_BID_1[5] invalid, no such block.
+WARNING(146): [Line 874] Block DdrCtrl_RDATA_1[82] invalid, no such block.
+WARNING(147): [Line 876] Block DdrCtrl_BID_1[6] invalid, no such block.
+WARNING(148): [Line 878] Block DdrCtrl_RDATA_1[83] invalid, no such block.
+WARNING(149): [Line 880] Block DdrCtrl_BID_1[7] invalid, no such block.
+WARNING(150): [Line 882] Block DdrCtrl_RDATA_1[84] invalid, no such block.
+WARNING(151): [Line 885] Block DdrCtrl_RDATA_1[85] invalid, no such block.
+WARNING(152): [Line 888] Block DdrCtrl_RDATA_1[86] invalid, no such block.
+WARNING(153): [Line 890] Block DdrCtrl_BVALID_1 invalid, no such block.
+WARNING(154): [Line 892] Block DdrCtrl_RDATA_1[87] invalid, no such block.
+WARNING(155): [Line 894] Block DdrCtrl_WREADY_1 invalid, no such block.
+WARNING(156): [Line 896] Block DdrCtrl_RDATA_1[88] invalid, no such block.
+WARNING(157): [Line 898] Block DdrCtrl_AREADY_1 invalid, no such block.
+WARNING(158): [Line 900] Block DdrCtrl_RDATA_1[89] invalid, no such block.
+WARNING(159): [Line 903] Block DdrCtrl_RDATA_1[90] invalid, no such block.
+WARNING(160): [Line 906] Block DdrCtrl_RDATA_1[91] invalid, no such block.
+WARNING(161): [Line 908] Block DdrCtrl_RID_1[0] invalid, no such block.
+WARNING(162): [Line 910] Block DdrCtrl_RDATA_1[92] invalid, no such block.
+WARNING(163): [Line 912] Block DdrCtrl_RID_1[1] invalid, no such block.
+WARNING(164): [Line 914] Block DdrCtrl_RDATA_1[93] invalid, no such block.
+WARNING(165): [Line 916] Block DdrCtrl_RID_1[2] invalid, no such block.
+WARNING(166): [Line 918] Block DdrCtrl_RDATA_1[94] invalid, no such block.
+WARNING(167): [Line 920] Block DdrCtrl_RID_1[3] invalid, no such block.
+WARNING(168): [Line 922] Block DdrCtrl_RDATA_1[95] invalid, no such block.
+WARNING(169): [Line 924] Block DdrCtrl_RID_1[4] invalid, no such block.
+WARNING(170): [Line 926] Block DdrCtrl_RDATA_1[96] invalid, no such block.
+WARNING(171): [Line 928] Block DdrCtrl_RID_1[5] invalid, no such block.
+WARNING(172): [Line 930] Block DdrCtrl_RDATA_1[97] invalid, no such block.
+WARNING(173): [Line 932] Block DdrCtrl_RID_1[6] invalid, no such block.
+WARNING(174): [Line 934] Block DdrCtrl_RDATA_1[98] invalid, no such block.
+WARNING(175): [Line 936] Block DdrCtrl_RID_1[7] invalid, no such block.
+WARNING(176): [Line 938] Block DdrCtrl_RDATA_1[99] invalid, no such block.
+WARNING(177): [Line 940] Block DdrCtrl_RLAST_1 invalid, no such block.
+WARNING(178): [Line 942] Block DdrCtrl_RDATA_1[100] invalid, no such block.
+WARNING(179): [Line 944] Block DdrCtrl_RRESP_1[0] invalid, no such block.
+WARNING(180): [Line 946] Block DdrCtrl_RDATA_1[101] invalid, no such block.
+WARNING(181): [Line 948] Block DdrCtrl_RRESP_1[1] invalid, no such block.
+WARNING(182): [Line 950] Block DdrCtrl_RDATA_1[102] invalid, no such block.
+WARNING(183): [Line 952] Block DdrCtrl_RVALID_1 invalid, no such block.
+WARNING(184): [Line 954] Block DdrCtrl_RDATA_1[103] invalid, no such block.
+WARNING(185): [Line 960] Block DdrCtrl_RDATA_1[104] invalid, no such block.
+WARNING(186): [Line 963] Block DdrCtrl_RDATA_1[105] invalid, no such block.
+WARNING(187): [Line 966] Block DdrCtrl_RDATA_1[106] invalid, no such block.
+WARNING(188): [Line 969] Block DdrCtrl_RDATA_1[107] invalid, no such block.
+WARNING(189): [Line 972] Block DdrCtrl_RDATA_1[108] invalid, no such block.
+WARNING(190): [Line 975] Block DdrCtrl_RDATA_1[109] invalid, no such block.
+WARNING(191): [Line 978] Block DdrCtrl_RDATA_1[110] invalid, no such block.
+WARNING(192): [Line 981] Block DdrCtrl_RDATA_1[111] invalid, no such block.
+WARNING(193): [Line 984] Block DdrCtrl_RDATA_1[112] invalid, no such block.
+WARNING(194): [Line 987] Block DdrCtrl_RDATA_1[113] invalid, no such block.
+WARNING(195): [Line 990] Block DdrCtrl_RDATA_1[114] invalid, no such block.
+WARNING(196): [Line 993] Block DdrCtrl_RDATA_1[115] invalid, no such block.
+WARNING(197): [Line 996] Block DdrCtrl_RDATA_1[116] invalid, no such block.
+WARNING(198): [Line 999] Block DdrCtrl_RDATA_1[117] invalid, no such block.
+WARNING(199): [Line 1002] Block DdrCtrl_RDATA_1[118] invalid, no such block.
+WARNING(200): [Line 1005] Block DdrCtrl_RDATA_1[119] invalid, no such block.
+WARNING(201): [Line 1008] Block DdrCtrl_RDATA_1[120] invalid, no such block.
+WARNING(202): [Line 1011] Block DdrCtrl_RDATA_1[121] invalid, no such block.
+WARNING(203): [Line 1014] Block DdrCtrl_RDATA_1[122] invalid, no such block.
+WARNING(204): [Line 1017] Block DdrCtrl_RDATA_1[123] invalid, no such block.
+WARNING(205): [Line 1020] Block DdrCtrl_RDATA_1[124] invalid, no such block.
+WARNING(206): [Line 1023] Block DdrCtrl_RDATA_1[125] invalid, no such block.
+WARNING(207): [Line 1026] Block DdrCtrl_RDATA_1[126] invalid, no such block.
+WARNING(208): [Line 1029] Block DdrCtrl_RDATA_1[127] invalid, no such block.
+
+Reading placement constraints from '/home/wisdom/2019.3/project/DDR3Test/Efinity/work_pnr/DdrControllerDebug.io_place'.
+WARNING(209): Clock input pad, jtag_inst1_TCK, is placed at a GPIO location. Expect extra clock skew
+WARNING(210): Clock driver jtag_inst1_TCK should use the dedicated clock pad.
+The driver, jtag_inst1_RESET, of control net, jtag_inst1_RESET, should be placed at a dedicated control pad location.
+***** Ending stage initial placement *****
+***** Beginning stage placement ... *****
+memory map at hier_level memory(0)/mem_blk(0)
+mult map at hier_level mult(0)/mult_blk(0)
+Starting Global Placer ...
+
+ ----------     -------  --------------     -------
+  Iteration       WHPWL  Delay Max (ps) Convergence
+ ----------     -------  --------------     -------
+          1    46042600           11158         3.0%
+          2    39815196           10401         4.5%
+          3    30123842            9763         7.5%
+          4    13667515            7689        17.4%
+          5     7306787            7281        28.9%
+          6     5431064            6087        37.0%
+          7     3060068            7085        39.7%
+          8     2422020            6313        44.6%
+          9     2073534            5750        48.9%
+         10     1601774            5379        48.9%
+         11     1355912            7084        55.0%
+         12     1242167            5325        55.0%
+         13     1146614            5634        57.0%
+         14     1019334            5866        57.0%
+         15      963774            6871        57.0%
+         16      887925            6065        57.0%
+         17      819421            6378        57.0%
+         18      747670            6476        57.0%
+         19      726272            7441        57.6%
+         20      689630            6077        60.0%
+         21      692649            6662        60.0%
+         22      671994            6676        61.0%
+         23      641674            6383        63.1%
+         24      646764            5760        63.7%
+         25      616318            5674        67.5%
+         26      591740            5889        69.8%
+         27      573447            5625        73.4%
+         28      557968            5927        75.8%
+         29      554675            5717        77.3%
+         30      544021            5808        79.2%
+         31      529178            5461        81.7%
+         32      521882            5418        83.2%
+         33      513304            5697        85.2%
+         34      505145            5380        87.2%
+         35      504357            6120        88.2%
+         36      501986            5566        89.3%
+         37      501344            5644        90.4%
+         38      498179            5046        91.5%
+         39      498661            5372        92.0%
+         40      497866            5595        92.8%
+         41      498095            5332        93.1%
+         42      499227            5418        93.7%
+         43      500005            5121        94.3%
+         44      501798            5160        94.9%
+         45      503457            5362        95.2%
+         46      497682            5377        95.8%
+         47      497188            5502        97.3%
+         48      499080            5502        98.1%
+         49      501502            5505        98.6%
+         50      503835            5505        98.8%
+         51      505942            5307        99.0%
+         52      506847            5091        99.4%
+Starting Legalization ... 
+Starting Annealer
+
+ ----------     -------  --------------     -------
+  Iteration       WHPWL  Delay Max (ps)     R Limit
+ ----------     -------  --------------     -------
+          0      506847            9091        30.0
+          1      445294            9055        30.0
+          2      376541            9014        28.8
+          3      342795            9706        27.8
+          4      322555            9246        27.2
+          5      308665            8543        26.6
+          6      298140            8266        26.3
+          7      289275            7883        26.0
+          8      282964            7883        25.7
+          9      276750            7885        25.2
+         10      270839            7885        24.9
+         11      266458            7884        24.3
+         12      262621            7884        23.8
+         13      258264            7884        23.1
+         14      254865            7884        22.5
+         15      251729            7884        21.8
+         16      249090            7884        21.1
+         17      245776            7766        20.4
+         18      243310            7765        19.7
+         19      240618            7744        18.9
+         20      236781            7744        18.2
+         21      234624            7804        17.5
+         22      232211            7741        16.8
+         23      230462            7820        16.1
+         24      228958            7820        15.4
+         25      226986            7820        14.8
+         26      225407            7820        14.1
+         27      223668            7820        13.5
+         28      222523            7820        12.8
+         29      220713            7834        12.3
+         30      219304            7934        11.7
+         31      217831            7820        11.1
+         32      216271            7820        10.6
+         33      215140            7820        10.1
+         34      213816            7820         9.6
+         35      212217            7820         9.1
+         36      211378            7820         8.7
+         37      210143            7820         8.2
+         38      209220            7820         7.8
+         39      207830            7820         7.4
+         40      207471            7551         7.1
+         41      206575            7551         6.8
+         42      205287            8049         6.4
+         43      204746            8032         6.1
+         44      205343            7804         5.8
+         45      204616            7804         5.5
+         46      203289            7804         5.2
+         47      202118            7592         4.8
+Placement successful: 15924 cells are placed
+Peak congestion smeared over 1/4 of the chip is 0.23453 at 338,144
+Congestion-weighted HPWL per net: 10.1641
+
+Reading placement constraints from '/home/wisdom/2019.3/project/DDR3Test/Efinity/outflow/DdrControllerDebug.qplace'.
+Finish Realign Types (2135 blocks need type change)
+WARNING(211): There are 3442 pins with no clock driven by root clock: jtag_inst1_TCK
+
+Completed placement consistency check successfully.
+
+Placement estimated critical path delay: 7.88777 ns
+Successfully created FPGA place file '/home/wisdom/2019.3/project/DDR3Test/Efinity/outflow/DdrControllerDebug.place'
+Placement took 110.564 seconds.
+	Placement took 110.56 seconds (approximately) in total CPU time.
+Placement virtual memory usage: begin = 470.764 MB, end = 1290.3 MB, delta = 819.54 MB
+Placement resident set memory usage: begin = 359.344 MB, end = 650.764 MB, delta = 291.42 MB
+	Placement peak resident set memory usage = 1085.73 MB
+***** Ending stage placement *****

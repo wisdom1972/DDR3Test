@@ -1,0 +1,1183 @@
+[EFX-0000 INFO] Efinix FPGA Synthesis.
+[EFX-0000 INFO] Version: 2019.3.272.1.6
+[EFX-0000 INFO] Compiled: Dec  9 2019.
+[EFX-0000 INFO] 
+[EFX-0000 INFO] Copyright (C) 2013 - 2019 Efinix Inc. All rights reserved.
+
+INFO: ***** Beginning Analysis ... *****
+INFO: The default VHDL library search path is now "/home/wisdom/2019.3/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504)
+-- Analyzing Verilog file '/home/wisdom/2019.3/sim_models/maplib/efinix_maplib.v' (VERI-1482)
+-- Analyzing Verilog file '/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrControllerDebug.v' (VERI-1482)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrControllerDebug.v(3): INFO: analyzing included file 'ParamDefine.v' (VERI-1328)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrControllerDebug.v(3): INFO: back to file '/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrControllerDebug.v' (VERI-2320)
+-- Analyzing Verilog file '/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrData.v' (VERI-1482)
+-- Analyzing Verilog file '/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v' (VERI-1482)
+-- Analyzing Verilog file '/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrTest.v' (VERI-1482)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrTest.v(430): WARNING: data object 'WrAddrRemainder' is already declared (VERI-2170)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrTest.v(213): INFO: previous declaration of 'WrAddrRemainder' is from here (VERI-1967)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrTest.v(430): WARNING: second declaration of 'WrAddrRemainder' ignored (VERI-1329)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrTest.v(85): WARNING: parameter declaration becomes local in 'DdrTest' with formal parameter declaration list (VERI-1199)
+-- Analyzing Verilog file '/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrTestStatic.v' (VERI-1482)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrTestStatic.v(58): WARNING: parameter declaration becomes local in 'DdrTestStatic' with formal parameter declaration list (VERI-1199)
+-- Analyzing Verilog file '/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v' (VERI-1482)
+-- Analyzing Verilog file '/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/ddr_reset_sequencer.v' (VERI-1482)
+INFO: Analysis took 0.166765 seconds.
+INFO: 	Analysis took 0.16 seconds (approximately) in total CPU time.
+INFO: Analysis virtual memory usage: begin = 158.772 MB, end = 161.1 MB, delta = 2.328 MB
+INFO: Analysis resident set memory usage: begin = 39.38 MB, end = 43.54 MB, delta = 4.16 MB
+INFO: 	Analysis peak resident set memory usage = 43.54 MB
+INFO: ***** Ending Analysis ... *****
+INFO: ***** Beginning Elaboration ... *****
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrControllerDebug.v(69): INFO: compiling module 'DdrControllerDebug' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/ddr_reset_sequencer.v(47): INFO: compiling module 'ddr_reset_sequencer(FREQ=32'b01100100)' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/ddr_reset_sequencer.v(87): WARNING: expression size 64 truncated to fit in target size 20 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrTest.v(16): INFO: compiling module 'DdrTest(DDR_END_ADDRESS=32'b0111111111111111111111111111111,DDR_WRITE_FIRST=1'b1)' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v(16): INFO: compiling module 'DdrWrCtrl(AXI_WR_ID=8'b10101010)' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrData.v(18): INFO: compiling module 'DdrWrDataGen' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v(328): INFO: compiling module 'DdrRdCtrl(AXI_RD_ID=8'b01010101)' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrData.v(102): INFO: compiling module 'DdrRdDataChk(RIGHT_CNT_WIDTH=27)' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v(616): INFO: compiling module 'Axi4FullDeplex' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/DdrTestStatic.v(16): INFO: compiling module 'DdrTestStatic' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(283): WARNING: port 'probe39' remains unconnected for this instance (VERI-1927)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(10): INFO: compiling module 'edb_top' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(2231): INFO: compiling module 'edb_la_top(NUM_PROBES=39,INPUT_PIPE_STAGES=1,PROBE3_WIDTH=32,PROBE4_WIDTH=8,PROBE15_WIDTH=32,PROBE16_WIDTH=32,PROBE17_WIDTH=32,PROBE18_WIDTH=32,PROBE19_WIDTH=32,PROBE20_WIDTH=32,PROBE21_WIDTH=32,PROBE22_WIDTH=32,PROBE23_WIDTH=32,PROBE27_WIDTH=32,PROBE28_WIDTH=32,PROBE29_WIDTH=32,PROBE30_WIDTH=32,PROBE31_WIDTH=32,PROBE32_WIDTH=32,PROBE33_WIDTH=32,PROBE34_WIDTH=32,PROBE35_WIDTH=32,PROBE37_WIDTH=32,PROBE38_WIDTH=32,PROBE3_TYPE=2,PROBE15_TYPE=2,PROBE16_TYPE=2,PROBE17_TYPE=2,PROBE18_TYPE=2,PROBE19_TYPE=2,PROBE20_TYPE=2,PROBE21_TYPE=2,PROBE22_TYPE=2,PROBE23_TYPE=2,PROBE27_TYPE=2,PROBE28_TYPE=2,PROBE29_TYPE=2,PROBE30_TYPE=2,PROBE31_TYPE=2,PROBE32_TYPE=2,PROBE33_TYPE=2,PROBE34_TYPE=2,PROBE35_TYPE=2)' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(536): INFO: compiling module 'adbg_crc32' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(4718): INFO: compiling module 'compare_unit(WIDTH=11'b01,PIPE=1)' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(4718): INFO: compiling module 'compare_unit(WIDTH=11'b01000,PIPE=1)' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(4864): WARNING: expression size 8 truncated to fit in target size 1 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(4867): WARNING: expression size 8 truncated to fit in target size 1 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(4870): WARNING: expression size 8 truncated to fit in target size 1 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(4873): WARNING: expression size 8 truncated to fit in target size 1 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(4718): INFO: compiling module 'compare_unit(WIDTH=11'b0100000,PIPE=1)' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(4864): WARNING: expression size 32 truncated to fit in target size 1 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(4867): WARNING: expression size 32 truncated to fit in target size 1 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(4870): WARNING: expression size 32 truncated to fit in target size 1 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(4873): WARNING: expression size 32 truncated to fit in target size 1 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(4933): INFO: compiling module 'trigger_unit(WIDTH=20,PIPE=1)' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(4059): INFO: compiling module 'la_biu(CAPTURE_WIDTH=697)' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(3792): INFO: compiling module 'fifo_with_read(DATA_WIDTH=698)' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(3863): WARNING: expression size 11 truncated to fit in target size 10 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(3870): WARNING: expression size 12 truncated to fit in target size 11 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(3874): WARNING: expression size 12 truncated to fit in target size 11 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(3875): WARNING: expression size 12 truncated to fit in target size 11 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(3879): WARNING: expression size 32 truncated to fit in target size 11 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(3881): WARNING: expression size 12 truncated to fit in target size 11 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(3893): WARNING: expression size 32 truncated to fit in target size 11 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(3895): WARNING: expression size 12 truncated to fit in target size 11 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(3902): WARNING: expression size 11 truncated to fit in target size 10 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(3745): INFO: compiling module 'fifo_address_trancode_unit' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(3770): WARNING: expression size 11 truncated to fit in target size 10 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(3773): WARNING: expression size 6 truncated to fit in target size 5 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(3985): WARNING: expression size 32 truncated to fit in target size 11 (VERI-1209)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(2140): INFO: compiling module 'simple_dual_port_ram(DATA_WIDTH=698,ADDR_WIDTH=10,RAM_INIT_FILE="")' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(4147): WARNING: net 'conn64[11][63]' does not have a driver (VDB-1002)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(2796): WARNING: net 'burst_write' does not have a driver (VDB-1002)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(2849): WARNING: net 'register_conn[2][63]' does not have a driver (VDB-1002)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(743): INFO: compiling module 'edb_vio_top(NUM_PROBE_IN=14,NUM_PROBE_OUT=8,PROBE_IN2_WIDTH=24,PROBE_IN3_WIDTH=48,PROBE_IN4_WIDTH=48,PROBE_IN5_WIDTH=10,PROBE_IN6_WIDTH=16,PROBE_IN7_WIDTH=24,PROBE_IN8_WIDTH=10,PROBE_IN9_WIDTH=10,PROBE_IN10_WIDTH=10,PROBE_IN11_WIDTH=10,PROBE_IN12_WIDTH=10,PROBE_IN13_WIDTH=10,PROBE_OUT2_WIDTH=2,PROBE_OUT3_WIDTH=2,PROBE_OUT4_WIDTH=8,PROBE_OUT5_WIDTH=32,PROBE_OUT6_WIDTH=32,PROBE_OUT7_WIDTH=32,PROBE_OUT0_INIT_VAL=256'b0,PROBE_OUT1_INIT_VAL=256'b01,PROBE_OUT2_INIT_VAL=256'b011,PROBE_OUT3_INIT_VAL=256'b011,PROBE_OUT4_INIT_VAL=256'b01111,PROBE_OUT5_INIT_VAL=256'b010000000000000000000000000000000,PROBE_OUT6_INIT_VAL=256'b0,PROBE_OUT7_INIT_VAL=256'b011111111111111111111111111111111)' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(1300): INFO: compiling module 'vio_core(INT_WIDTH=232,OUT_WIDTH=110,PROBE_OUT_INIT_VAL=110'b11111111111111111111111111111111000000000000000000000000000000001000000000000000000000000000000000001111111110)' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(2058): INFO: compiling module 'syncer' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(614): INFO: compiling module 'debug_hub' (VERI-1018)
+/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v(224): WARNING: input port 'probe39[0]' is not connected on this instance (VDB-1013)
+INFO: Elaboration took 4.06499 seconds.
+INFO: 	Elaboration took 4.07 seconds (approximately) in total CPU time.
+INFO: Elaboration virtual memory usage: begin = 161.1 MB, end = 790.372 MB, delta = 629.272 MB
+INFO: Elaboration resident set memory usage: begin = 43.54 MB, end = 674.448 MB, delta = 630.908 MB
+INFO: 	Elaboration peak resident set memory usage = 695.412 MB
+INFO: ***** Ending Elaboration ... *****
+[EFX-0000 INFO] Setting Synthesis Option: mode=speed
+INFO: ***** Beginning Reading Mapping Library ... *****
+-- Analyzing Verilog file '/home/wisdom/2019.3/sim_models/maplib/efinix_maplib.v' (VERI-1482)
+/home/wisdom/2019.3/sim_models/maplib/efinix_maplib.v(6): INFO: compiling module 'EFX_ADD' (VERI-1018)
+/home/wisdom/2019.3/sim_models/maplib/efinix_maplib.v(19): INFO: compiling module 'EFX_FF' (VERI-1018)
+/home/wisdom/2019.3/sim_models/maplib/efinix_maplib.v(36): INFO: compiling module 'EFX_GBUFCE' (VERI-1018)
+/home/wisdom/2019.3/sim_models/maplib/efinix_maplib.v(45): INFO: compiling module 'EFX_IDDR' (VERI-1018)
+/home/wisdom/2019.3/sim_models/maplib/efinix_maplib.v(59): INFO: compiling module 'EFX_ODDR' (VERI-1018)
+/home/wisdom/2019.3/sim_models/maplib/efinix_maplib.v(75): INFO: compiling module 'EFX_IOBUF' (VERI-1018)
+/home/wisdom/2019.3/sim_models/maplib/efinix_maplib.v(87): INFO: compiling module 'EFX_LUT4' (VERI-1018)
+/home/wisdom/2019.3/sim_models/maplib/efinix_maplib.v(95): INFO: compiling module 'EFX_MULT' (VERI-1018)
+/home/wisdom/2019.3/sim_models/maplib/efinix_maplib.v(130): INFO: compiling module 'EFX_RAM_4K' (VERI-1018)
+/home/wisdom/2019.3/sim_models/maplib/efinix_maplib.v(190): INFO: compiling module 'EFX_RAM_5K' (VERI-1018)
+/home/wisdom/2019.3/sim_models/maplib/efinix_maplib.v(262): INFO: compiling module 'EFX_DPRAM_5K' (VERI-1018)
+/home/wisdom/2019.3/sim_models/maplib/efinix_maplib.v(367): INFO: compiling module 'RAMB5' (VERI-1018)
+/home/wisdom/2019.3/sim_models/maplib/efinix_maplib.v(429): INFO: compiling module 'EFX_RAM_10K' (VERI-1018)
+INFO: Reading Mapping Library took 0.00926452 seconds.
+INFO: 	Reading Mapping Library took 0.01 seconds (approximately) in total CPU time.
+INFO: Reading Mapping Library virtual memory usage: begin = 790.372 MB, end = 790.372 MB, delta = 0 MB
+INFO: Reading Mapping Library resident set memory usage: begin = 674.448 MB, end = 674.448 MB, delta = 0 MB
+INFO: 	Reading Mapping Library peak resident set memory usage = 695.412 MB
+INFO: ***** Ending Reading Mapping Library ... *****
+[EFX-0000 INFO] ... Pre-synthesis checks begin
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 107) Removing unconnected net : BID[7]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 107) Removing unconnected net : BID[6]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 107) Removing unconnected net : BID[5]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 107) Removing unconnected net : BID[4]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 107) Removing unconnected net : BID[3]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 107) Removing unconnected net : BID[2]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 107) Removing unconnected net : BID[1]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 107) Removing unconnected net : BID[0]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 409) Removing unconnected net : RID[7]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 409) Removing unconnected net : RID[6]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 409) Removing unconnected net : RID[5]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 409) Removing unconnected net : RID[4]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 409) Removing unconnected net : RID[3]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 409) Removing unconnected net : RID[2]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 409) Removing unconnected net : RID[1]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 409) Removing unconnected net : RID[0]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 410) Removing unconnected net : RRESP[1]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/../Source/Ram2Axi4.v 410) Removing unconnected net : RRESP[0]
+[EFX-0200 WARNING] The above message was generated too many times, subsequent similar messages will be muted.
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v 4724) Removing unconnected net : compared_in[0]
+[EFX-0200 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v 4725) Removing unconnected net : mask_in[0]
+[EFX-0677 INFO] (/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v 2155) Zero initialization of uninitialized memory block 'ram'.
+[EFX-0201 WARNING] The above message was generated too many times, subsequent similar messages will be muted.
+[EFX-0266 WARNING] Module Instance 'fifo_with_read_inst' input pin tied to constant (next_win=0).
+[EFX-0266 WARNING] Module Instance 'fifo_with_read_inst' input pin tied to constant (din[697]=1).
+[EFX-0201 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v 4147) Re-wiring to GND non-driven net 'conn64[11][63]'.
+[EFX-0201 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v 4147) Re-wiring to GND non-driven net 'conn64[11][62]'.
+[EFX-0201 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v 4147) Re-wiring to GND non-driven net 'conn64[11][61]'.
+[EFX-0201 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v 4147) Re-wiring to GND non-driven net 'conn64[11][60]'.
+[EFX-0201 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v 4147) Re-wiring to GND non-driven net 'conn64[11][59]'.
+[EFX-0201 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v 4147) Re-wiring to GND non-driven net 'conn64[11][58]'.
+[EFX-0201 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v 4147) Re-wiring to GND non-driven net 'conn64[11][57]'.
+[EFX-0201 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v 4147) Re-wiring to GND non-driven net 'conn64[11][56]'.
+[EFX-0201 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v 4147) Re-wiring to GND non-driven net 'conn64[11][55]'.
+[EFX-0201 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v 4147) Re-wiring to GND non-driven net 'conn64[11][54]'.
+[EFX-0266 WARNING] Module Instance 'la_biu_inst' input pin tied to constant (capture_enable=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[0].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[0].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[0].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[1].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[1].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[1].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[2].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[2].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[2].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[3].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[3].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[3].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[4].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[4].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[4].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[5].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[5].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[5].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[6].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[6].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[6].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[7].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[7].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[7].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[8].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[8].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[8].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[9].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[9].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[9].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[10].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[10].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[10].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[11].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[11].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[11].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[12].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[12].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[12].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[13].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[13].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[13].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[14].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[14].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[14].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[15].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[15].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[15].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[16].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[16].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[16].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[17].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[17].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[17].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[18].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[18].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[18].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[19].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[19].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[19].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[20].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[20].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[20].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[21].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[21].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[21].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[22].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[22].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[22].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[23].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[23].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[23].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[24].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[24].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[24].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[25].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[25].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[25].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[26].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[26].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[26].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[27].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[27].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[27].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[28].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[28].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[28].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[29].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[29].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[29].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[30].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[30].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[30].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[31].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[31].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[31].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[32].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[32].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[32].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[33].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[33].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[33].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[34].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[34].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[34].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[35].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[35].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[35].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[36].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[36].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[36].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[37].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[37].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[37].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[38].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[38].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[38].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[39].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[39].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[39].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[40].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[40].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[40].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[41].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[41].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[41].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[42].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[42].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[42].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[43].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[43].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[43].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[44].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[44].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[44].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[45].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[45].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[45].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[46].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[46].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[46].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[47].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[47].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[47].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[48].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[48].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[48].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[49].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[49].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[49].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[50].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[50].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[50].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[51].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[51].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[51].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[52].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[52].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[52].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[53].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[53].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[53].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[54].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[54].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[54].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[55].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[55].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[55].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[56].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[56].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[56].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[57].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[57].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[57].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[58].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[58].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[58].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[59].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[59].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[59].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[60].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[60].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[60].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[61].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[61].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[61].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[62].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[62].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[62].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[63].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[63].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[63].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[64].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[64].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[64].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[65].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[65].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[65].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[66].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[66].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[66].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[67].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[67].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[67].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[68].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[68].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[68].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[69].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[69].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[69].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[70].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[70].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[70].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[71].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[71].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[71].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[72].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[72].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[72].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[73].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[73].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[73].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[74].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[74].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[74].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[75].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[75].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[75].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[76].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[76].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[76].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[77].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[77].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[77].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[78].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[78].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[78].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[79].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[79].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[79].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[80].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[80].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[80].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[81].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[81].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[81].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[82].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[82].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[82].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[83].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[83].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[83].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[84].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[84].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[84].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[85].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[85].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[85].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[86].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[86].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[86].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[87].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[87].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[87].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[88].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[88].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[88].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[89].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[89].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[89].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[90].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[90].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[90].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[91].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[91].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[91].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[92].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[92].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[92].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[93].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[93].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[93].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[94].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[94].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[94].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[95].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[95].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[95].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[96].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[96].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[96].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[97].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[97].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[97].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[98].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[98].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[98].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[99].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[99].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[99].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[100].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[100].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[100].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[101].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[101].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[101].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[102].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[102].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[102].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[103].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[103].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[103].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[104].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[104].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[104].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[105].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[105].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[105].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[106].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[106].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[106].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[107].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[107].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[107].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[108].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[108].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[108].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[109].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[109].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[109].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[110].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[110].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[110].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[111].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[111].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[111].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[112].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[112].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[112].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[113].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[113].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[113].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[114].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[114].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[114].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[115].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[115].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[115].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[116].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[116].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[116].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[117].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[117].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[117].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[118].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[118].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[118].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[119].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[119].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[119].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[120].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[120].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[120].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[121].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[121].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[121].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[122].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[122].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[122].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[123].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[123].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[123].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[124].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[124].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[124].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[125].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[125].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[125].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[126].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[126].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[126].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[127].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[127].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[127].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[128].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[128].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[128].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[129].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[129].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[129].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[130].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[130].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[130].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[131].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[131].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[131].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[132].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[132].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[132].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[133].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[133].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[133].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[134].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[134].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[134].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[135].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[135].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[135].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[136].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[136].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[136].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[137].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[137].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[137].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[138].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[138].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[138].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[139].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[139].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[139].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[140].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[140].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[140].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[141].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[141].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[141].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[142].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[142].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[142].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[143].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[143].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[143].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[144].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[144].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[144].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[145].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[145].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[145].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[146].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[146].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[146].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[147].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[147].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[147].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[148].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[148].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[148].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[149].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[149].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[149].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[150].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[150].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[150].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[151].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[151].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[151].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[152].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[152].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[152].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[153].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[153].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[153].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[154].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[154].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[154].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[155].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[155].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[155].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[156].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[156].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[156].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[157].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[157].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[157].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[158].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[158].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[158].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[159].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[159].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[159].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[160].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[160].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[160].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[161].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[161].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[161].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[162].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[162].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[162].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[163].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[163].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[163].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[164].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[164].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[164].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[165].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[165].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[165].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[166].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[166].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[166].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[167].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[167].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[167].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[168].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[168].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[168].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[169].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[169].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[169].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[170].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[170].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[170].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[171].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[171].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[171].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[172].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[172].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[172].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[173].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[173].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[173].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[174].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[174].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[174].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[175].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[175].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[175].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[176].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[176].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[176].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[177].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[177].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[177].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[178].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[178].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[178].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[179].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[179].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[179].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[180].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[180].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[180].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[181].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[181].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[181].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[182].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[182].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[182].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[183].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[183].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[183].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[184].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[184].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[184].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[185].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[185].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[185].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[186].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[186].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[186].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[187].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[187].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[187].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[188].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[188].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[188].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[189].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[189].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[189].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[190].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[190].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[190].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[191].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[191].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[191].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 2s CPU user time : 6s CPU sys time : 0s MEM : 1131496KB)
+[EFX-0000 INFO] ... NameSpace init begin
+[EFX-0000 INFO] ... NameSpace init end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1131496KB)
+[EFX-0000 INFO] ... Mapping design "DdrControllerDebug"
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[192].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[192].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[192].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[193].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[193].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[193].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[194].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[194].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[194].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[195].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[195].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[195].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[196].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[196].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[196].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[197].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[197].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[197].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[198].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[198].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[198].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[199].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[199].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[199].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[200].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[200].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[200].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[201].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[201].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[201].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[202].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[202].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[202].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[203].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[203].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[203].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[204].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[204].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[204].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[205].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[205].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[205].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[206].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[206].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[206].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[207].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[207].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[207].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[208].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[208].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[208].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[209].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[209].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[209].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[210].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[210].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[210].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[211].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[211].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[211].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[212].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[212].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[212].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[213].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[213].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[213].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[214].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[214].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[214].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[215].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[215].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[215].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[216].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[216].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[216].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[217].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[217].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[217].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[218].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[218].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[218].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[219].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[219].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[219].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[220].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[220].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[220].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[221].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[221].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[221].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[222].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[222].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[222].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[223].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[223].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[223].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[224].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[224].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[224].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[225].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[225].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[225].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[226].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[226].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[226].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[227].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[227].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[227].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[228].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[228].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[228].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[229].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[229].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[229].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[230].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[230].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[230].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[231].sync_probe_in_U' input pin tied to constant (RSTA=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[231].sync_probe_in_U' input pin tied to constant (RSTB=0).
+[EFX-0266 WARNING] Module Instance 'gen_probe_in_sync[231].sync_probe_in_U' input pin tied to constant (ENB=1).
+[EFX-0031 WARNING] (/home/wisdom/2019.3/project/DDR3Test/Efinity/debug_top.v 2013) 'mux_355' instance is encountered with don't-care(1'bx) input, rewiring to GND.
+[EFX-0266 WARNING] Module Instance 'Axi' input pin tied to constant (trig_in=0).
+[EFX-0266 WARNING] Module Instance 'Axi' input pin tied to constant (trig_out_ack=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in14[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in15[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in16[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in17[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in18[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in19[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in20[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in21[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in22[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in23[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in24[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in25[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in26[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in27[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in28[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in29[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in30[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in31[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in32[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in33[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in34[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in35[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in36[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in37[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in38[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in39[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in40[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in41[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in42[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in43[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in44[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in45[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in46[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in47[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in48[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in49[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in50[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in51[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in52[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in53[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in54[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in55[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in56[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in57[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in58[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in59[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in60[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in61[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in62[0]=0).
+[EFX-0266 WARNING] Module Instance 'DdrTest' input pin tied to constant (probe_in63[0]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_inhibit[2]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_inhibit[3]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_inhibit[4]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_inhibit[5]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_inhibit[6]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_inhibit[7]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_inhibit[8]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_inhibit[9]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_inhibit[10]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_inhibit[11]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_inhibit[12]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_inhibit[13]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_inhibit[14]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_tdo[2]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_tdo[3]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_tdo[4]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_tdo[5]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_tdo[6]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_tdo[7]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_tdo[8]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_tdo[9]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_tdo[10]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_tdo[11]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_tdo[12]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_tdo[13]=0).
+[EFX-0266 WARNING] Module Instance 'debug_hub_inst' input pin tied to constant (edb_module_tdo[14]=0).
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "ddr_reset_sequencer(FREQ=32'b01100100)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "ddr_reset_sequencer(FREQ=32'b01100100)" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1156604KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "DdrWrCtrl(AXI_WR_ID=8'b10101010)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "DdrWrCtrl(AXI_WR_ID=8'b10101010)" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1156604KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "DdrWrDataGen" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "DdrWrDataGen" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1156604KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "DdrRdCtrl(AXI_RD_ID=8'b01010101)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "DdrRdCtrl(AXI_RD_ID=8'b01010101)" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1156604KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "DdrRdDataChk(RIGHT_CNT_WIDTH=27)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "DdrRdDataChk(RIGHT_CNT_WIDTH=27)" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1156604KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Axi4FullDeplex" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "Axi4FullDeplex" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1156604KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "DdrTest(DDR_END_ADDRESS=32'b0111111111111111111111111111111,DDR_WRITE_FIRST=1'b1)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "DdrTest(DDR_END_ADDRESS=32'b0111111111111111111111111111111,DDR_WRITE_FIRST=1'b1)" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1156604KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "DdrTestStatic" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "DdrTestStatic" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1156604KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "adbg_crc32" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "adbg_crc32" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1156604KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "compare_unit(WIDTH=11'b01,PIPE=1)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "compare_unit(WIDTH=11'b01,PIPE=1)" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1156604KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "compare_unit(WIDTH=11'b01000,PIPE=1)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "compare_unit(WIDTH=11'b01000,PIPE=1)" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1156604KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "compare_unit(WIDTH=11'b0100000,PIPE=1)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "compare_unit(WIDTH=11'b0100000,PIPE=1)" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1156604KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "trigger_unit(WIDTH=20,PIPE=1)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "trigger_unit(WIDTH=20,PIPE=1)" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1156604KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fifo_address_trancode_unit" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fifo_address_trancode_unit" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1156604KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "simple_dual_port_ram(DATA_WIDTH=698,ADDR_WIDTH=10,RAM_INIT_FILE="")" begin
+[EFX-0000 INFO] ... Clocked Read Port Synthesis for ram net: ram
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "simple_dual_port_ram(DATA_WIDTH=698,ADDR_WIDTH=10,RAM_INIT_FILE="")" end (Real time : 1s CPU user time : 6s CPU sys time : 0s MEM : 1209756KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fifo_with_read(DATA_WIDTH=698)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fifo_with_read(DATA_WIDTH=698)" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1209756KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "la_biu(CAPTURE_WIDTH=697)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "la_biu(CAPTURE_WIDTH=697)" end (Real time : 0s CPU user time : 6s CPU sys time : 0s MEM : 1209756KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "edb_la_top(NUM_PROBES=39,INPUT_PIPE_STAGES=1,PROBE3_WIDTH=32,PROBE4_WIDTH=8,PROBE15_WIDTH=32,PROBE16_WIDTH=32,PROBE17_WIDTH=32,PROBE18_WIDTH=32,PROBE19_WIDTH=32,PROBE20_WIDTH=32,PROBE21_WIDTH=32,PROBE22_WIDTH=32,PROBE23_WIDTH=32,PROBE27_WIDTH=32,PROBE28_WIDTH=32,PROBE29_WIDTH=32,PROBE30_WIDTH=32,PROBE31_WIDTH=32,PROBE32_WIDTH=32,PROBE33_WIDTH=32,PROBE34_WIDTH=32,PROBE35_WIDTH=32,PROBE37_WIDTH=32,PROBE38_WIDTH=32,PROBE3_TYPE=2,PROBE15_TYPE=2,PROBE16_TYPE=2,PROBE17_TYPE=2,PROBE18_TYPE=2,PROBE19_TYPE=2,PROBE20_TYPE=2,PROBE21_TYPE=2,PROBE22_TYPE=2,PROBE23_TYPE=2,PROBE27_TYPE=2,PROBE28_TYPE=2,PROBE29_TYPE=2,PROBE30_TYPE=2,PROBE31_TYPE=2,PROBE32_TYPE=2,PROBE33_TYPE=2,PROBE34_TYPE=2,PROBE35_TYPE=2)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "edb_la_top(NUM_PROBES=39,INPUT_PIPE_STAGES=1,PROBE3_WIDTH=32,PROBE4_WIDTH=8,PROBE15_WIDTH=32,PROBE16_WIDTH=32,PROBE17_WIDTH=32,PROBE18_WIDTH=32,PROBE19_WIDTH=32,PROBE20_WIDTH=32,PROBE21_WIDTH=32,PROBE22_WIDTH=32,PROBE23_WIDTH=32,PROBE27_WIDTH=32,PROBE28_WIDTH=32,PROBE29_WIDTH=32,PROBE30_WIDTH=32,PROBE31_WIDTH=32,PROBE32_WIDTH=32,PROBE33_WIDTH=32,PROBE34_WIDTH=32,PROBE35_WIDTH=32,PROBE37_WIDTH=32,PROBE38_WIDTH=32,PROBE3_TYPE=2,PROBE15_TYPE=2,PROBE16_TYPE=2,PROBE17_TYPE=2,PROBE18_TYPE=2,PROBE19_TYPE=2,PROBE20_TYPE=2,PROBE21_TYPE=2,PROBE22_TYPE=2,PROBE23_TYPE=2,PROBE27_TYPE=2,PROBE28_TYPE=2,PROBE29_TYPE=2,PROBE30_TYPE=2,PROBE31_TYPE=2,PROBE32_TYPE=2,PROBE33_TYPE=2,PROBE34_TYPE=2,PROBE35_TYPE=2)" end (Real time : 13s CPU user time : 20s CPU sys time : 0s MEM : 2460892KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "syncer" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "syncer" end (Real time : 0s CPU user time : 20s CPU sys time : 0s MEM : 2460892KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "vio_core(INT_WIDTH=232,OUT_WIDTH=110,PROBE_OUT_INIT_VAL=110'b11111111111111111111111111111111000000000000000000000000000000001000000000000000000000000000000000001111111110)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "vio_core(INT_WIDTH=232,OUT_WIDTH=110,PROBE_OUT_INIT_VAL=110'b11111111111111111111111111111111000000000000000000000000000000001000000000000000000000000000000000001111111110)" end (Real time : 0s CPU user time : 20s CPU sys time : 0s MEM : 2460892KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "edb_vio_top(NUM_PROBE_IN=14,NUM_PROBE_OUT=8,PROBE_IN2_WIDTH=24,PROBE_IN3_WIDTH=48,PROBE_IN4_WIDTH=48,PROBE_IN5_WIDTH=10,PROBE_IN6_WIDTH=16,PROBE_IN7_WIDTH=24,PROBE_IN8_WIDTH=10,PROBE_IN9_WIDTH=10,PROBE_IN10_WIDTH=10,PROBE_IN11_WIDTH=10,PROBE_IN12_WIDTH=10,PROBE_IN13_WIDTH=10,PROBE_OUT2_WIDTH=2,PROBE_OUT3_WIDTH=2,PROBE_OUT4_WIDTH=8,PROBE_OUT5_WIDTH=32,PROBE_OUT6_WIDTH=32,PROBE_OUT7_WIDTH=32,PROBE_OUT0_INIT_VAL=256'b0,PROBE_OUT1_INIT_VAL=256'b01,PROBE_OUT2_INIT_VAL=256'b011,PROBE_OUT3_INIT_VAL=256'b011,PROBE_OUT4_INIT_VAL=256'b01111,PROBE_OUT5_INIT_VAL=256'b010000000000000000000000000000000,PROBE_OUT6_INIT_VAL=256'b0,PROBE_OUT7_INIT_VAL=256'b011111111111111111111111111111111)" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "edb_vio_top(NUM_PROBE_IN=14,NUM_PROBE_OUT=8,PROBE_IN2_WIDTH=24,PROBE_IN3_WIDTH=48,PROBE_IN4_WIDTH=48,PROBE_IN5_WIDTH=10,PROBE_IN6_WIDTH=16,PROBE_IN7_WIDTH=24,PROBE_IN8_WIDTH=10,PROBE_IN9_WIDTH=10,PROBE_IN10_WIDTH=10,PROBE_IN11_WIDTH=10,PROBE_IN12_WIDTH=10,PROBE_IN13_WIDTH=10,PROBE_OUT2_WIDTH=2,PROBE_OUT3_WIDTH=2,PROBE_OUT4_WIDTH=8,PROBE_OUT5_WIDTH=32,PROBE_OUT6_WIDTH=32,PROBE_OUT7_WIDTH=32,PROBE_OUT0_INIT_VAL=256'b0,PROBE_OUT1_INIT_VAL=256'b01,PROBE_OUT2_INIT_VAL=256'b011,PROBE_OUT3_INIT_VAL=256'b011,PROBE_OUT4_INIT_VAL=256'b01111,PROBE_OUT5_INIT_VAL=256'b010000000000000000000000000000000,PROBE_OUT6_INIT_VAL=256'b0,PROBE_OUT7_INIT_VAL=256'b011111111111111111111111111111111)" end (Real time : 1s CPU user time : 20s CPU sys time : 0s MEM : 2460892KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "debug_hub" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "debug_hub" end (Real time : 0s CPU user time : 20s CPU sys time : 0s MEM : 2460892KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "edb_top" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "edb_top" end (Real time : 3s CPU user time : 23s CPU sys time : 0s MEM : 2460892KB)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "DdrControllerDebug" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "DdrControllerDebug" end (Real time : 6s CPU user time : 29s CPU sys time : 0s MEM : 2460892KB)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s CPU user time : 32s CPU sys time : 0s MEM : 2460892KB)
+[EFX-0000 INFO] ... Flat synthesis begin
+[EFX-0000 INFO] ... Flat synthesis end (Real time : 1s CPU user time : 32s CPU sys time : 0s MEM : 2460892KB)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s CPU user time : 32s CPU sys time : 0s MEM : 2460892KB)
+[EFX-0000 INFO] ... Check and break combinational loops begin
+[EFX-0000 INFO] ... Check and break combinational loops end (Real time : 0s CPU user time : 32s CPU sys time : 0s MEM : 2460892KB)
+[EFX-0000 INFO] ... Top level netlist RUSHC IOs pre-synthesis begin
+[EFX-0000 INFO] ... SOP modeling begin
+[EFX-0000 INFO] ... SOP modeling end (Real time : 1s CPU user time : 33s CPU sys time : 0s MEM : 2460892KB)
+[EFX-0000 INFO] ... LUT mapping begin
+[EFX-0000 INFO] ... LS, strategy: 3, nd: 6397, ed: 21747, lv: 7
+[EFX-0000 INFO] ... LUT mapping end (Real time : 45s CPU user time : 75s CPU sys time : 3s MEM : 2460892KB)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation end (Real time : 3s CPU user time : 78s CPU sys time : 3s MEM : 2460892KB)
+[EFX-0000 INFO] ... Top level netlist RUSHC IOs pre-synthesis end (Real time : 50s CPU user time : 79s CPU sys time : 3s MEM : 2460892KB)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing end (Real time : 1s CPU user time : 80s CPU sys time : 3s MEM : 2460892KB)
+INFO: ***** Beginning VDB Netlist Checker ... *****
+WARNING: Input/Inout Port jtag_inst1_DRCK is unconnected and will be removed
+WARNING: Input/Inout Port jtag_inst1_RUNTEST is unconnected and will be removed
+WARNING: Input/Inout Port jtag_inst1_TMS is unconnected and will be removed
+WARNING: Input/Inout Port Axi1Clk is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_0[7] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_0[6] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_0[5] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_0[4] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_0[3] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_0[2] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_0[1] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_0[0] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RRESP_0[1] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RRESP_0[0] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_0[7] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_0[6] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_0[5] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_0[4] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_0[3] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_0[2] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_0[1] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_0[0] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_AREADY_1 is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_WREADY_1 is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_1[7] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_1[6] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_1[5] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_1[4] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_1[3] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_1[2] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_1[1] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RID_1[0] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[127] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[126] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[125] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[124] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[123] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[122] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[121] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[120] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[119] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[118] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[117] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[116] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[115] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[114] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[113] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[112] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[111] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[110] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[109] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[108] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[107] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[106] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[105] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[104] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[103] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[102] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[101] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[100] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[99] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[98] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[97] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[96] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[95] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[94] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[93] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[92] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[91] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[90] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[89] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[88] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[87] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[86] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[85] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[84] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[83] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[82] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[81] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[80] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[79] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[78] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[77] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[76] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[75] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[74] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[73] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[72] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[71] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[70] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[69] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[68] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[67] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[66] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[65] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[64] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[63] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[62] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[61] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[60] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[59] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[58] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[57] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[56] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[55] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[54] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[53] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[52] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[51] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[50] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[49] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[48] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[47] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[46] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[45] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[44] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[43] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[42] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[41] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[40] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[39] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[38] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[37] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[36] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[35] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[34] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[33] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[32] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[31] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[30] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[29] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[28] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[27] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[26] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[25] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[24] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[23] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[22] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[21] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[20] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[19] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[18] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[17] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[16] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[15] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[14] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[13] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[12] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[11] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[10] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[9] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[8] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[7] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[6] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[5] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[4] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[3] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[2] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[1] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RDATA_1[0] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RLAST_1 is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RVALID_1 is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RRESP_1[1] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_RRESP_1[0] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_1[7] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_1[6] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_1[5] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_1[4] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_1[3] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_1[2] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_1[1] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BID_1[0] is unconnected and will be removed
+WARNING: Input/Inout Port DdrCtrl_BVALID_1 is unconnected and will be removed
+INFO: Found 173 warnings in the post-synthesis netlist.
+INFO: VDB Netlist Checker took 6.34042 seconds.
+INFO: 	VDB Netlist Checker took 6.34 seconds (approximately) in total CPU time.
+INFO: VDB Netlist Checker virtual memory usage: begin = 2490.09 MB, end = 2490.09 MB, delta = 0 MB
+INFO: VDB Netlist Checker resident set memory usage: begin = 2382.93 MB, end = 2382.93 MB, delta = 0 MB
+INFO: 	VDB Netlist Checker peak resident set memory usage = 2460.89 MB
+INFO: ***** Ending VDB Netlist Checker ... *****
+-- Writing netlist 'DdrControllerDebug' to Verilog file '/home/wisdom/2019.3/project/DDR3Test/Efinity/outflow/DdrControllerDebug.map.v' (VDB-1030)
+[EFX-0000 INFO] Resource Summary 
+[EFX-0000 INFO] =============================== 
+[EFX-0000 INFO] EFX_ADD         : 	1414
+[EFX-0000 INFO] EFX_LUT4        : 	6356
+[EFX-0000 INFO] EFX_MULT        : 	2
+[EFX-0000 INFO] EFX_FF          : 	9894
+[EFX-0000 INFO] EFX_RAM_5K      : 	140
+[EFX-0000 INFO] EFX_GBUFCE      : 	3
+[EFX-0000 INFO] =============================== 
