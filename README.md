@@ -2,18 +2,19 @@
  Efinix Trion DDR3 Tester
 
  ```
-  .--,       .--,
- ( (  \.---./  ) )
-  '.__/o   o\__.'
-     {=  ^  =}
-      >  -  <
- __.""`-------`"".__
+ .--,       .--,
+( (  \.---./  ) )
+ '.__/o   o\__.'
+    {=  ^  =}
+     >  -  <
+__.""`-------`"".__
 /                   \
 \ Trion DDR3 Tester /
 /                   \
 \___________________/
-    ___)( )(___
-   (((__) (__)))
+   ___)( )(___
+  (((__) (__)))
+
 
    ____   ___ ____   ___         ___ ____   ___  _  _   
   |___ \ / _ \___ \ / _ \       / _ \___ \ / _ \| || |  
@@ -130,8 +131,8 @@
 
  - STEP3: download the total repository directory into Efinity project directory, for examples, C:\Efinity\project\DDR3Test
 
- -- Efinity  
- -- Source  
+   - Efinity  
+   - Source  
 
 
  - STEP4: open the Efinity project with the Efinity/DdrControllerDebug.xml
